@@ -1,0 +1,42 @@
+---
+import en from '../../i18n/en';
+import es from '../../i18n/es';
+import Layout from '../../layouts/Layout.astro';
+import Choose from '../../sections/main/Choose.astro';
+import Contact from '../../sections/main/Contact.astro';
+import Difference from '../../sections/main/Difference.astro';
+import Estimate from '../../sections/main/Estimate.astro';
+import Hero from '../../sections/main/Hero.astro';
+import Information from '../../sections/main/Information.astro';
+import Numbers from '../../sections/main/Numbers.astro';
+import Projects from '../../sections/main/Projects.astro';
+import Reviews from '../../sections/main/Reviews.astro';
+import Services from '../../sections/main/Services.astro';
+import Share from '../../sections/main/Share.astro';
+import Solutions from '../../sections/main/Solutions.astro';
+
+import type { Language } from '../../types/language.type';
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+export const defaultRedirect = '/en';
+
+const lang = Astro.params.lang as Language;
+const translations = { es, en };
+const t = translations[lang];
+---
+<Layout lang={lang} t={t}>
+  <Hero content={t.main.hero} />
+  <Solutions content={t.main.solutions} />
+  <Difference content={t.main.difference} />
+  <Choose content={t.main.choose} />
+  <Reviews content={t.main.review} />
+  <Share content={t.main.share} />
+  <Information content={t.main.information} />
+  <Contact content={t.main.contact} />
+  <Services content={t.main.services} />
+  <Projects content={t.main.projects} />
+  <Numbers content={t.main.numbers} />
+  <Estimate content={t.main.estimate} />
+</Layout>

@@ -1,0 +1,356 @@
+---
+type Translations = typeof import('../i18n/en').default;
+type ProjectsContent = Translations['main']['projects'];
+interface Props {
+  content: ProjectsContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<div class="flex flex-col justify-center items-center gap-10 relative w-full" id="carousel-container">
+  {/* Carousel Track */}
+  <div class="w-full overflow-hidden">
+    <div 
+      id="carousel-track"
+      class="flex transition-transform duration-500 ease-out"
+    >
+      {/* Clones at start (last 3 items) */}
+      {
+        content.items.slice(-3).map((item) => (
+          <div class="carousel-item shrink-0 flex flex-col justify-center items-start gap-6 px-3 select-none" data-clone="true">
+            <div class="w-full h-auto aspect-384/540 rounded-3xl overflow-hidden relative">
+              <img 
+                src={`/images/${item.image}.webp`} 
+                alt={item.title} 
+                width="391" 
+                height="700" 
+                class="w-full h-full object-cover object-center absolute inset-0 pointer-events-none"
+              >
+            </div>
+            <div class="flex flex-col justify-center items-start gap-1 pointer-events-none">
+              <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
+              <p class="text-paragraph text-[14px] font-normal leading-[150%]">{item.place}</p>
+            </div>
+          </div>
+        ))
+      }
+      
+      {/* Original items */}
+      {
+        content.items.map((item) => (
+          <div class="carousel-item shrink-0 flex flex-col justify-center items-start gap-6 px-3 select-none" data-item-index="true">
+            <div class="w-full h-auto aspect-384/540 rounded-3xl overflow-hidden relative">
+              <img 
+                src={`/images/${item.image}.webp`} 
+                alt={item.title} 
+                width="391" 
+                height="700" 
+                class="w-full h-full object-cover object-center absolute inset-0 pointer-events-none"
+              >
+            </div>
+            <div class="flex flex-col justify-center items-start gap-1 pointer-events-none">
+              <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
+              <p class="text-paragraph text-[14px] font-normal leading-[150%]">{item.place}</p>
+            </div>
+          </div>
+        ))
+      }
+      
+      {/* Clones at end (first 3 items) */}
+      {
+        content.items.slice(0, 3).map((item) => (
+          <div class="carousel-item shrink-0 flex flex-col justify-center items-start gap-6 px-3 select-none" data-clone="true">
+            <div class="w-full h-auto aspect-384/540 rounded-3xl overflow-hidden relative">
+              <img 
+                src={`/images/${item.image}.webp`} 
+                alt={item.title} 
+                width="391" 
+                height="700" 
+                class="w-full h-full object-cover object-center absolute inset-0 pointer-events-none"
+                decoding="async"
+                loading="lazy"
+              >
+            </div>
+            <div class="flex flex-col justify-center items-start gap-1 pointer-events-none">
+              <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
+              <p class="text-paragraph text-[14px] font-normal leading-[150%]">{item.place}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  {/* Indicators */}
+  <div class="flex justify-center items-center gap-2" id="carousel-indicators">
+    {
+      Array.from({ length: content.items.length }).map((_, index) => (
+        <button 
+          class={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${index === 0 ? 'bg-secondary w-8' : 'bg-secondary/10'}`}
+          data-index={index}
+        ></button>
+      ))
+    }
+  </div>
+
+  {/* Navigation Buttons */}
+  <button 
+    id="carousel-prev"
+    class="w-10 h-10 rounded-full bg-secondary/15 hover:bg-secondary/25 absolute top-[40%] -left-16 flex justify-center items-center transition-colors duration-300 z-10 cursor-pointer"
+    aria-label="Previous slide"
+  >
+    <img src="/images/arrow.svg" alt="Anterior" width="24" height="24" class="w-4 h-4 rotate-180">
+  </button>
+  <button 
+    id="carousel-next"
+    class="w-10 h-10 rounded-full bg-secondary/15 hover:bg-secondary/25 absolute top-[40%] -right-16 flex justify-center items-center transition-colors duration-300 z-10 cursor-pointer"
+    aria-label="Next slide"
+  >
+    <img src="/images/arrow.svg" alt="Siguiente" width="24" height="24" class="w-4 h-4">
+  </button>
+</div>
+
+<script is:inline>
+(function() {
+  const ITEM_COUNT = 6;
+  const AUTO_PLAY_INTERVAL = 8000;
+  const CLONE_COUNT = 3;
+
+  let currentIndex = CLONE_COUNT;
+  let itemsPerView = getItemsPerView();
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragStartTranslate = 0;
+  let autoPlayInterval = null;
+  let isTransitioning = false;
+
+  const container = document.getElementById('carousel-container');
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  const indicators = document.querySelectorAll('#carousel-indicators button');
+
+  function getItemsPerView() {
+    const width = window.innerWidth;
+    if (width < 640) return 1;
+    if (width < 768) return 2;
+    return 3;
+  }
+
+  function updateItemWidths() {
+    itemsPerView = getItemsPerView();
+    const items = document.querySelectorAll('.carousel-item');
+    const width = 100 / itemsPerView;
+    items.forEach(item => {
+      item.style.width = width + '%';
+    });
+    updatePosition();
+  }
+
+  function updatePosition() {
+    const offset = -(currentIndex * (100 / itemsPerView));
+    track.style.transform = `translateX(${offset}%)`;
+    updateIndicators();
+  }
+
+  function updateIndicators() {
+    const realIndex = (currentIndex - CLONE_COUNT) % ITEM_COUNT;
+    indicators.forEach((indicator, index) => {
+      const isActive = index === realIndex;
+      if (isActive) {
+        indicator.classList.add('bg-secondary', 'w-8');
+        indicator.classList.remove('bg-secondary/10');
+      } else {
+        indicator.classList.add('bg-secondary/10');
+        indicator.classList.remove('bg-secondary', 'w-8');
+      }
+    });
+  }
+
+  function nextSlide() {
+    if (isTransitioning) return;
+    track.style.transition = 'transform 0.5s ease-out';
+    isTransitioning = true;
+    currentIndex++;
+    updatePosition();
+    
+    if (currentIndex >= CLONE_COUNT + ITEM_COUNT) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        currentIndex = CLONE_COUNT;
+        updatePosition();
+        isTransitioning = false;
+      }, 500);
+    } else {
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+  }
+
+  function prevSlide() {
+    if (isTransitioning) return;
+    track.style.transition = 'transform 0.5s ease-out';
+    isTransitioning = true;
+    currentIndex--;
+    updatePosition();
+    
+    if (currentIndex < CLONE_COUNT) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        currentIndex = CLONE_COUNT + ITEM_COUNT - 1;
+        updatePosition();
+        isTransitioning = false;
+      }, 500);
+    } else {
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+  }
+
+  function goToSlide(index) {
+    if (isTransitioning) return;
+    track.style.transition = 'transform 0.5s ease-out';
+    isTransitioning = true;
+    currentIndex = CLONE_COUNT + index;
+    updatePosition();
+    
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 500);
+  }
+
+  function startAutoPlay() {
+    if (autoPlayInterval) clearInterval(autoPlayInterval);
+    autoPlayInterval = setInterval(nextSlide, AUTO_PLAY_INTERVAL);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayInterval) {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = null;
+    }
+  }
+
+  // Event Listeners
+  prevBtn.addEventListener('click', () => {
+    stopAutoPlay();
+    prevSlide();
+    startAutoPlay();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    stopAutoPlay();
+    nextSlide();
+    startAutoPlay();
+  });
+
+  indicators.forEach((indicator) => {
+    indicator.addEventListener('click', (e) => {
+      stopAutoPlay();
+      goToSlide(parseInt(e.target.dataset.index));
+      startAutoPlay();
+    });
+  });
+
+  // Drag & Swipe
+  track.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    dragStartX = e.clientX;
+    dragStartTranslate = getCurrentTranslate();
+    stopAutoPlay();
+    track.style.transition = 'none';
+    e.preventDefault();
+  });
+
+  track.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - dragStartX;
+    const percent = (diff / track.offsetWidth) * 100;
+    track.style.transform = `translateX(${dragStartTranslate + percent}%)`;
+  });
+
+  track.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    endDragSequence();
+  });
+
+  track.addEventListener('mouseleave', () => {
+    if (!isDragging) return;
+    endDragSequence();
+  });
+
+  track.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    dragStartX = e.touches[0].clientX;
+    dragStartTranslate = getCurrentTranslate();
+    stopAutoPlay();
+    track.style.transition = 'none';
+  });
+
+  track.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const diff = e.touches[0].clientX - dragStartX;
+    const percent = (diff / track.offsetWidth) * 100;
+    track.style.transform = `translateX(${dragStartTranslate + percent}%)`;
+  });
+
+  track.addEventListener('touchend', () => {
+    if (!isDragging) return;
+    endDragSequence();
+  });
+
+  function endDragSequence() {
+    isDragging = false;
+    const current = getCurrentTranslate();
+    const threshold = 100 / itemsPerView / 3;
+
+    track.style.transition = 'transform 0.5s ease-out';
+
+    const diff = dragStartTranslate - current;
+    if (diff > threshold) {
+      currentIndex++;
+    } else if (diff < -threshold) {
+      currentIndex--;
+    }
+    
+    updatePosition();
+
+    // Handle infinite loop
+    if (currentIndex >= CLONE_COUNT + ITEM_COUNT) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        currentIndex = CLONE_COUNT;
+        updatePosition();
+      }, 500);
+    } else if (currentIndex < CLONE_COUNT) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        currentIndex = CLONE_COUNT + ITEM_COUNT - 1;
+        updatePosition();
+      }, 500);
+    }
+
+    startAutoPlay();
+  }
+
+  function getCurrentTranslate() {
+    const transform = track.style.transform;
+    if (!transform) return 0;
+    const match = transform.match(/translateX\((-?\d+(?:\.\d+)?)%\)/);
+    return match ? parseFloat(match[1]) : 0;
+  }
+
+  // Initialize
+  window.addEventListener('resize', updateItemWidths);
+  updateItemWidths();
+  startAutoPlay();
+})();
+</script>
+
+<style>
+  #carousel-track {
+    will-change: transform;
+  }
+</style>

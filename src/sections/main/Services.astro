@@ -1,0 +1,43 @@
+---
+type Translations = typeof import('../../i18n/en').default;
+type ServicesContent = Translations['main']['services'];
+  interface Props {
+    content: ServicesContent;
+}
+const { content } = Astro.props as Props;
+
+// Obtener la ruta actual y normalizar el path sin prefijo de idioma
+const currentPath = Astro.url.pathname;
+
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+
+---
+<section class="w-full flex justify-center items-center relative pt-20 pb-28.5">
+  <img src="/images/services.webp" alt="Services Steve's Premium Pressure Washing" width="2100" height="1172" class="w-full h-full object-center object-cover absolute inset-0 -z-20 top-0 right-0">
+  <div class="w-full h-full back-estimate absolute -z-10 top-0 right-0" ></div>
+  <div class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-16 z-10 relative">
+    <div class="flex flex-col justify-center items-center gap-4">
+      <h2 class="text-white text-[56px] font-medium leading-[110%] capitalize font-title text-center" set:html={content.title}></h2>
+      <div class="w-21.5 h-1.5 rounded-sm bg-accent"></div>
+    </div>
+    <div class="w-full flex justify-center items-center rounded-3xl overflow-hidden ">
+      {
+        content.items.map((item)=>( 
+          <a href={`/${lang}/services/${item.href}`} class="w-1/2 aspect-600/412 h-auto">
+            <div class="w-full flex justify-center items-center group cursor-pointer relative h-full">
+              <img src={`/images/${item.image}.webp`} alt={item.title} width="700" height="391" class="w-full h-full absolute inset-0 object-cover object-center -z-20">
+              <div class="w-full h-full bg-black/50 absolute -z-10 group-hover:bg-black/20 transition-all duration-300 ease-in-out"></div>
+              <h3 class="text-[32px] text-white font-bold leading-[150%] capitalize">{item.title}</h3>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex justify-center items-center p-4 bg-accent gap-2 absolute -bottom-8.5 right-[8%] rounded-2xl">
+        <p class="text-primary text-[48px] font-bold leading-[125%] capitalize">10+</p>
+        <p class="text-[14px] font-medium uppercase text-primary leading-[150%]" set:html={content.tag}></p>
+      </div>
+  </div>
+</section>

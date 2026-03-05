@@ -1,0 +1,162 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  beforeImage: string;
+  afterImage: string;
+  altBefore?: string;
+  altAfter?: string;
+  width?: number;
+  height?: number;
+}
+
+const {
+  beforeImage,
+  afterImage,
+  altBefore = 'Antes',
+  altAfter = 'Después',
+  width = 1200,
+  height = 556,
+} = Astro.props;
+
+// Generar ID único para cada instancia
+const uniqueId = Math.random().toString(36).substr(2, 9);
+---
+<style>
+  .ba-image-wrapper {
+    --pos: 50%;
+  }
+</style> 
+
+<div
+  id={`ba-container-${uniqueId}`}
+  class={`relative mx-auto overflow-hidden select-none rounded-3xl w-full h-auto aspect-1200/556 `}
+
+>
+  <div id={`ba-labels-${uniqueId}`} class="absolute z-5 bg-black/20 w-full h-full flex justify-between items-end px-6 py-6 opacity-0 transition-opacity duration-300 pointer-events-none">
+    <div class="py-1 px-2 bg-black/50 rounded-2xl flex justify-center ">
+      <p class="text-white text-[14px] font-semibold leading-[150%] uppercase">Before</p>
+    </div>
+    <div class="py-1 px-2 bg-accent rounded-2xl flex justify-center">
+      <p class="text-primary text-[14px] font-semibold leading-[150%] uppercase">After</p>
+    </div>
+  </div>  
+  <!-- Imagen de fondo: siempre al tamaño natural -->
+  <img
+    src={beforeImage}
+    alt={altBefore}
+    class={`absolute top-0 left-0 w-full h-auto `}
+    loading="lazy"
+    decoding="async"
+    width="1200"
+    height="556"
+  />
+
+  <!-- Imagen "después" a tamaño completo, siempre fija -->
+  <img
+    src={afterImage}
+    alt={altAfter}
+    class={`absolute top-0 left-0 w-full h-auto `}
+    style={` clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);`}
+    loading="lazy"
+    decoding="async"
+    width="1200"
+    height="556"
+  />
+
+  <!-- Barra divisoria / handler -->
+  <div
+    id={`ba-handle-${uniqueId}`}
+    class="absolute top-0 bottom-0 w-1.5 bg-white z-10"
+    style="left: 50%;"
+  >
+    <div id={`ba-circle-${uniqueId}`} class="w-8.75 h-8.75 rounded-full cursor-pointer flex items-center justify-center bg-white shadow-lg" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <Icon name={"arrow-do"} class={"w-6.25 h-6.25"}/>
+    </div>
+  </div>
+</div>
+<script is:inline define:vars={{ uniqueId }}>
+  (function(){
+    const container = document.getElementById(`ba-container-${uniqueId}`);
+    const handle    = document.getElementById(`ba-handle-${uniqueId}`);
+    const circle    = document.getElementById(`ba-circle-${uniqueId}`);
+    const labels    = document.getElementById(`ba-labels-${uniqueId}`);
+    const afterImg  = container.querySelector('img[alt="Después"]');
+    let dragging = false;
+
+    const update = (clientX) => {
+      const rect = container.getBoundingClientRect();
+      let pct = (clientX - rect.left) / rect.width;
+      pct = Math.min(1, Math.max(0, pct));
+      const percStr = (pct * 100) + '%';
+      
+      // Actualizar clip-path de la imagen "después" - ahora del lado derecho
+      afterImg.style.clipPath = `polygon(${percStr} 0, 100% 0, 100% 100%, ${percStr} 100%)`;
+      handle.style.left = percStr;
+    };
+
+    // Mostrar etiquetas al hacer hover en el contenedor
+    container.addEventListener('mouseenter', () => {
+      if (!dragging) {
+        labels.style.opacity = '1';
+      }
+    });
+
+    // Detectar movimiento del mouse dentro del contenedor para mostrar labels después de arrastrar
+    container.addEventListener('mousemove', (e) => {
+      if (!dragging && !handle.contains(e.target)) {
+        labels.style.opacity = '1';
+      }
+    });
+
+    // Ocultar etiquetas al salir del contenedor
+    container.addEventListener('mouseleave', () => {
+      labels.style.opacity = '0';
+    });
+
+    // Ocultar etiquetas al hacer hover en el handle
+    handle.addEventListener('mouseenter', () => {
+      labels.style.opacity = '0';
+    });
+
+    // Start dragging SOLO cuando presionas sobre el círculo
+    circle.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      dragging = true;
+      circle.style.cursor = 'grabbing';
+      labels.style.opacity = '0'; // Ocultar durante el arrastre
+    });
+    
+    circle.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      dragging = true;
+      labels.style.opacity = '0'; // Ocultar durante el arrastre
+    });
+
+    // Siempre que sueltes el ratón/touch en cualquier parte, paramos el drag
+    window.addEventListener('mouseup', () => {
+      dragging = false;
+      circle.style.cursor = 'grab';
+    });
+    
+    window.addEventListener('touchend', () => {
+      dragging = false;
+    });
+
+    // Movimiento del ratón - solo si estamos arrastrando
+    window.addEventListener('mousemove', (e) => {
+      if (dragging) {
+        e.preventDefault();
+        update(e.clientX);
+      }
+    });
+
+    // Movimiento táctil - solo si estamos arrastrando
+    window.addEventListener('touchmove', (e) => {
+      if (dragging) {
+        e.preventDefault();
+        update(e.touches[0].clientX);
+      }
+    });
+  })();
+</script>

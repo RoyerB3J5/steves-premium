@@ -1,0 +1,30 @@
+---
+import en from '../../../i18n/en';
+import es from '../../../i18n/es';
+import Layout from '../../../layouts/Layout.astro';
+import type { Language } from '../../../types/language.type';
+
+export function getStaticPaths() {
+  const services = [
+    'residential',
+    'commercial',
+  ];
+  const languages = ['es', 'en'];
+
+  return languages.flatMap((lang) =>
+    services.map((service) => ({
+      params: { lang, service },
+    }))
+  );
+}
+
+export const defaultRedirect = '/en';
+
+const { lang, service } = Astro.params as { lang: Language; service: string };
+const translations = { es, en };
+const t = translations[lang];
+const serviceData = (t.services as Record<string, any>)[service] ?? {};
+---
+<Layout lang={lang} t={t}>
+
+</Layout>

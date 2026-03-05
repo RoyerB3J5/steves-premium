@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Halyard Display";
+  src: url("/fonts/Halyard_Display_Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Halyard Display";
+  src: url("/fonts/Halyard_Display_SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Halyard Display";
+  src: url("/fonts/Halyard_Display_Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  --font-family: "Poppins", sans-serif;
+  --font-title: "Halyard Display", sans-serif;
+  --color-primary: #00256c;
+  --color-primary-rgb: 0, 37, 108;
+  --color-secondary: #1874ca;
+  --color-accent: #efaf20;
+  --color-thirdary: #fad25a;
+  --color-paragraph: #49556a;
+  --breakpoint-xs: 400px;
+  --breakpoint-3xl: 106rem;
+}
+
+@layer base {
+  * {
+    font-family: var(--font-family);
+  }
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-3px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.animate-shake {
+  animation: shake 2s ease-in-out infinite;
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(90%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
+.animation-zoom {
+  opacity: 0;
+}
+
+.animation-zoom.active {
+  animation: zoomIn 0.6s ease-in-out forwards;
+}
+
+.animation-left {
+  opacity: 0;
+}
+
+.animation-left.active {
+  animation: fadeLeft 0.6s ease-in-out forwards;
+}
+
+.animation-right {
+  opacity: 0;
+}
+
+.animation-right.active {
+  animation: fadeRight 0.6s ease-in-out forwards;
+}
+
+.back-estimate {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 87, 255, 0.3) 0%,
+      rgba(0, 13, 38, 0.3) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 37, 108, 0.7) 0%, rgba(0, 37, 108, 0.7) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,21 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/en').default;
+type EstimateContent = Translations['main']['estimate'];
+interface Props {
+  content: EstimateContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full flex justify-center items-center relative py-20">
+  <img src="/images/estimate.webp" alt="Estimate" width="2000" height="848" class="w-full h-full object-center object-cover absolute inset-0 -z-20">
+  <div class="w-full h-full back-estimate absolute -z-10"></div>
+  <div class="flex flex-col justify-center items-center gap-10">
+    <div class="flex flex-col justify-center items-center gap-4">
+      <h2 set:html={content.title} class="text-[56px] text-white font-medium leading-[110%] capitalize font-title text-center"></h2>
+      <p class="text-center text-white text-[14px] font-normal leading-[150%] max-w-121.75">{content.description}</p>
+    </div>
+    <Button text={content.button.label} href={content.button.href} extraBtnClass={content.button.bgColor} textClass={content.button.textColor}/>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/en').default;
+type ShareContent = Translations['main']['share'];
+interface Props {
+  content: ShareContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full flex justify-center items-center bg-primary">
+  <div class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex  justify-center items-center gap-14 py-20">
+    <div class="flex flex-col justify-center items-start gap-10 w-[45%]">
+      <div class="flex flex-col justify-center items-start gap-4">
+        <h2 set:html={content.title} class="text-white text-[56px] font-title font-medium leading-[110%] capitalize"></h2>
+        <p set:html={content.description} class="text-white text-[14px] font-normal leading-[150%]"></p>
+      </div>
+      <Button text={content.button.label} href={content.button.href} extraBtnClass={content.button.bgColor} textClass={content.button.textColor}/>
+    </div>
+    <div class="w-[55%] flex justify-end items-start aspect-636/491 relative">
+      <div class="aspect-588/448 w-[90%] h-auto rounded-3xl overflow-hidden relative">
+        <img src="/images/share.webp" alt="share image" width="588" height="448" class="w-full h-full object-cover inset-0 absolute object-left"/>
+      </div>
+      <div class="absolute bottom-0 left-0 bg-white rounded-3xl gap-2 p-6 flex flex-col justify-center items-start">
+        <div class="flex justify-start items-center gap-2">
+          <img src="/images/star-2.svg" alt="star" width="20" height="20" class="w-6 h-auto"/>
+          <p class="text-[14px] text-primary leading-[150%] uppercase font-bold">{content.content.title}</p>
+        </div>
+        <p class="text-paragraph text-[14px] font-normal leading-[150%]" set:html={content.content.description}></p>
+      </div>
+    </div>
+  </div>
+</section>
