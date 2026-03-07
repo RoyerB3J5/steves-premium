@@ -11,11 +11,11 @@ const { content } = Astro.props as Props;
 <section class="w-full flex items-center justify-center relative overflow-hidden">
   <img src={`/images/${content.imageHero}.webp`} alt={content.title} width="2100" height="1358" class="absolute inset-0 w-full h-full object-cover object-bottom -z-20 " loading="eager"
     decoding="async">
-  <div class="w-full max-w-screen md:max-w-7xl flex flex-row justify-start items-center px-5 xl:px-0 h-dvh md:h-[90vh] lg:h-screen pb-[2%]">
-    <div class="flex flex-col justify-center items-start gap-8 translate-y-10">
-      <div class="aspect-121/68 w-full h-auto max-w-125 bg-white hidden"></div>
-      <h1 set:html={content.title} class="text-white text-[64px] leading-[110%] font-medium capitalize font-title"></h1>
-      <p class="text-white text-[32px] font-bold leading-[150%]">{content.description}</p>
+  <div class="w-full max-w-screen md:max-w-7xl flex flex-row justify-start items-end px-5 xl:px-0 h-dvh md:h-[90vh] lg:h-screen pb-[1%] 3xl:pb-[4%]">
+    <div class="flex flex-col justify-center items-start gap-4 3xl:gap-8 ">
+      <div class="aspect-121/68 w-full h-auto max-w-100 3xl:max-w-125 bg-white "></div>
+      <h1 set:html={content.title} class="text-white text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title"></h1>
+      <p class="text-white text-[28px] 3xl:text-[32px] font-bold leading-[150%]">{content.description}</p>
       <div class="flex justify-center items-center gap-4.5">
         {
           content.buttons.map((button)=>( 

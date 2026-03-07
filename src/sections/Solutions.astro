@@ -1,0 +1,14 @@
+---
+import SolutionsContent from '../components/SolutionsContent.astro';
+
+type Translations = typeof import('../i18n/en').default;
+type SolutionsContent = Translations['servicesPage']['solution'];
+interface Props {
+  content: SolutionsContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full max-w-sceeen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-16 py-30">
+  <SolutionsContent content={content} />
+</section>
+  

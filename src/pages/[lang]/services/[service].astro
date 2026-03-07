@@ -2,7 +2,12 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Hero from '../../../sections/Hero.astro';
+import Contact from '../../../sections/main/Contact.astro';
+import Estimate from '../../../sections/main/Estimate.astro';
 import type { Language } from '../../../types/language.type';
+
+type ServiceData = typeof en.services[keyof typeof en.services];
 
 export function getStaticPaths() {
   const services = [
@@ -23,8 +28,31 @@ export const defaultRedirect = '/en';
 const { lang, service } = Astro.params as { lang: Language; service: string };
 const translations = { es, en };
 const t = translations[lang];
-const serviceData = (t.services as Record<string, any>)[service] ?? {};
+const serviceData = (t.services as Record<string, ServiceData>)[service] ?? ({} as ServiceData);
 ---
 <Layout lang={lang} t={t}>
-
+  <Hero content={serviceData.hero} />
+  <section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-16 pt-20 pb-15">
+    <div class="flex flex-col justify-center items-center gap-4">
+      <h2 class="text-primary text-[56px] font-medium leading-[110%] capitalize font-title text-center" set:html={serviceData.services.title}></h2>
+      <div class="w-21.5 h-1.5 rounded-sm bg-secondary"></div>
+    </div>
+    <div class={`w-full grid ${service == 'residential' ? 'grid-cols-3' : 'grid-cols-2'} justify-center items-center gap-6`}>
+      {
+        serviceData.services.items.map((item)=>( 
+          <div class="w-full flex flex-col justify-center items-center overflow-hidden h-full">
+            <div class={`w-full h-auto ${service == 'residential' ? 'aspect-384/246' : 'aspect-588/246' }  relative rounded-t-3xl overflow-hidden`}>
+              <img src={`/images/${item.image}.webp`} alt={item.title} width="282" height="180" class={`w-full h-full absolute inset-0 object-cover ${item.image == 'solution-5' ? 'object-center' : 'object-[50%_20%]'} `}/>
+            </div>
+            <div class="flex flex-col justify-center items-start p-8 gap-2 bg-secondary/5 box-border border-b border-l border-r border-secondary/15 w-full rounded-b-3xl flex-1">
+              <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
+              <p class="text-paragraph text-[14px] leading-[150%] font-normal">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <Contact content={serviceData.contact} />
+  <Estimate content={serviceData.estimate}/>
 </Layout>

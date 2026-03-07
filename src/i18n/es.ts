@@ -39,20 +39,20 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[64px] leading-[110%] font-medium capitalize font-title">Pressure Washing & Paver Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
           label: "Call Now",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
-          textColor: "text-white",
+          textColor: "text-primary",
         },
         {
           label: "Get An Estimate Now",
           href: "#",
           buttonColor: "border-[1.5px] border-white",
-          textColor: "text-primary",
+          textColor: "text-white",
         },
       ],
       imageHero: "main-hero",
@@ -78,6 +78,16 @@ export default {
           title: "Top-Quality Exterior Cleaning Tailored to Your Property.",
           content:
             "Whether it's your family home or your business, Steve’s Premium Pressure Washing restores your property's curb appeal. We use professional equipment and techniques for a spotless experience, serving Orlando, Kissimmee, and surrounding areas.",
+          items: [
+            "Lake Nona",
+            "Conway",
+            "Winter Garden",
+            "Windemere",
+            "Orlando",
+            "Saint Cloud",
+            "Kissimmee",
+            "Belle Isle",
+          ],
         },
       },
       section2: {
@@ -396,7 +406,374 @@ export default {
       ],
     },
   },
-  services: {},
+  servicesPage: {
+    hero: {
+      img: "services-hero",
+      title:
+        "Our Professional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br/> Services </span>",
+      description:
+        "From cozy homes to large commercial complexes, Steve’s <br/> Premium Pressure Washing delivers spotless results across <br/> Orlando.",
+      buttons: [
+        {
+          label: "Call Now",
+          href: "tel:+14078448104",
+          buttonColor: "bg-accent",
+          textColor: "text-primary",
+        },
+        {
+          label: "Get An Estimate Now",
+          href: "#",
+          buttonColor: "border-[1.5px] border-white",
+          textColor: "text-white",
+        },
+      ],
+      stadistic: [
+        {
+          title: "100%",
+          description: "SATISFACTION",
+        },
+        {
+          title: "Orlando",
+          description: "Local Experts",
+        },
+      ],
+    },
+    services: [
+      {
+        image: "residential",
+        tag: "premium care",
+        title: "Residential",
+        description:
+          " Protecting your home’s value with specialized exterior care.",
+        href: "residential",
+      },
+      {
+        image: "commercial",
+        tag: "professional grade",
+        title: "Commercial",
+        description:
+          " Expert solutions to maintain a professional and safe business environment.",
+        href: "commercial",
+      },
+    ],
+    solution: {
+      title: "Professional Solutions for <br/> every surface",
+      items: [
+        {
+          image: "solution1",
+          title: "Paver Sealing",
+          description: "Protect and enhance your stone surfaces.",
+        },
+        {
+          image: "solution2",
+          title: "House Washing",
+          description: "Soft wash technology for a safe deep clean.",
+        },
+        {
+          image: "solution3",
+          title: "Patio & Driveway",
+          description: "Remove oil stains and grime effectively.",
+        },
+        {
+          image: "solution4",
+          title: "Building Washing",
+          description: "Maintain a professional business exterior.",
+        },
+        {
+          image: "solution5",
+          title: "Parking Lot & Garage",
+          description: "Comprehensive commercial lot maintenance.",
+        },
+        {
+          image: "solution6",
+          title: "Deck Washing",
+          description: "Restore the natural beauty of your wood.",
+        },
+        {
+          image: "solution7",
+          title: "Fence Washing",
+          description: "Renew privacy fences and partitions",
+        },
+        {
+          image: "solution8",
+          title: "Gutter Cleaning",
+          description: "Essential maintenance for water flow.",
+        },
+      ],
+    },
+  },
+  services: {
+    residential: {
+      hero: {
+        img: "residential-hero",
+        title:
+          "Professional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Home <br/> Restoration </span> In <br/> Orlando",
+        description:
+          "Pressure washing keeps your home clean and protected, <br/> removing grime from roofs, siding, and outdoor surfaces.",
+        buttons: [
+          {
+            label: "Call Now",
+            href: "tel:+14078448104",
+            buttonColor: "bg-accent",
+            textColor: "text-primary",
+          },
+          {
+            label: "Get An Estimate Now",
+            href: "#",
+            buttonColor: "border-[1.5px] border-white",
+            textColor: "text-white",
+          },
+        ],
+        stadistic: [
+          {
+            title: "100%",
+            description: "SATISFACTION",
+          },
+          {
+            title: "Orlando",
+            description: "Local Experts",
+          },
+        ],
+      },
+      services: {
+        title: "Our Specialized Services",
+        items: [
+          {
+            image: "solution1",
+            title: "Paver Sealing",
+            description:
+              "Protects against dirt, grime, and UV damage to keep pavers vibrant and durable.",
+          },
+          {
+            image: "solution2",
+            title: "House Washing",
+            description:
+              "Gentle yet effective methods to remove mold, mildew, and stains from your home’s exterior.",
+          },
+          {
+            image: "solution3",
+            title: "Patio & Driveway Cleaning",
+            description:
+              "Powerful equipment to remove oil stains, tire marks, and built-up grime.",
+          },
+          {
+            image: "solution6",
+            title: "Deck Pressure Washing",
+            description:
+              "Safely revives wood's natural beauty by removing dirt without damaging the surface.",
+          },
+          {
+            image: "solution7",
+            title: "Fence Pressure Washing",
+            description:
+              "Restores the appearance of wooden, vinyl, or metal fences.",
+          },
+          {
+            image: "solution8",
+            title: "Gutter Cleaning",
+            description:
+              "Professional removal of debris to prevent water damage to your foundation and roof.",
+          },
+        ],
+      },
+      contact: {
+        tag: "Fast & Easy Process",
+        title:
+          'Tell Us About <br/> <span class="text-secondary text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+        description:
+          "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
+      },
+      estimate: {
+        title:
+          "Ready to <span class='text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+        description:
+          "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
+        button: {
+          label: "GET A FREE ESTIMATE",
+          href: "#",
+          bgColor: "bg-accent",
+          textColor: "text-primary",
+          icon: "arrow",
+        },
+      },
+    },
+    commercial: {
+      hero: {
+        img: "commercial-hero",
+        title:
+          "<span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Commercial <br/> Commercial </span> For <br/> Business <br/> Excellence",
+        description:
+          "A clean exterior makes a strong first impression. Our <br/> commercial washing enhances your business’s safety and <br/> appearance.",
+        buttons: [
+          {
+            label: "Call Now",
+            href: "tel:+14078448104",
+            buttonColor: "bg-accent",
+            textColor: "text-primary",
+          },
+          {
+            label: "Get An Estimate Now",
+            href: "#",
+            buttonColor: "border-[1.5px] border-white",
+            textColor: "text-white",
+          },
+        ],
+        stadistic: [
+          {
+            title: "100%",
+            description: "SATISFACTION",
+          },
+          {
+            title: "Orlando",
+            description: "Local Experts",
+          },
+        ],
+      },
+      services: {
+        title: "Our Specialized Services",
+        items: [
+          {
+            image: "solution4",
+            title: "Building Washing",
+            description:
+              "Eliminates grime and stains from your business exterior for a pristine look.",
+          },
+          {
+            image: "solution5",
+            title: "Parking Lot & Garage Cleaning",
+            description:
+              "Thorough cleaning of concrete surfaces to ensure a safe and inviting environment.",
+          },
+        ],
+      },
+      contact: {
+        tag: "Fast & Easy Process",
+        title:
+          'Tell Us About <br/> <span class="text-secondary text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+        description:
+          "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
+      },
+      estimate: {
+        title:
+          "Ready to <span class='text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+        description:
+          "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
+        button: {
+          label: "GET A FREE ESTIMATE",
+          href: "#",
+          bgColor: "bg-accent",
+          textColor: "text-primary",
+          icon: "arrow",
+        },
+      },
+    },
+  },
+  gallery: {
+    hero: {
+      video: "",
+      title:
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br/> Sealing</span> Experts',
+      description: "A Service You Can Trust",
+      buttons: [
+        {
+          label: "Call Now",
+          href: "tel:+14078448104",
+          buttonColor: "bg-accent",
+          textColor: "text-primary",
+        },
+        {
+          label: "Get An Estimate Now",
+          href: "#",
+          buttonColor: "border-[1.5px] border-white",
+          textColor: "text-white",
+        },
+      ],
+      imageHero: "main-hero",
+    },
+    images: {
+      title: "Project Gallery",
+      items: [
+        "gallery-1",
+        "gallery-2",
+        "gallery-3",
+        "gallery-4",
+        "gallery-5",
+        "gallery-6",
+        "gallery-7",
+        "gallery-8",
+        "gallery-9",
+        "gallery-10",
+        "gallery-11",
+        "gallery-12",
+        "gallery-13",
+        "gallery-14",
+        "gallery-15",
+        "gallery-16",
+      ],
+    },
+    review: {
+      title: "the trust of our community",
+      items: [
+        {
+          content:
+            "Steve takes great care in his work. Goes above and beyond without being asked. Wendy fielded a ton of questions without any hesitation. Both of them walk you through a job as if you were family. Will definitely call them back when we need them. Thanks to both for taking care of our pressuring washing on short notice!!",
+          name: "Britt",
+          time: "A month ago",
+          back: "bg-[#E33E7A]",
+        },
+        {
+          content:
+            "Steve and Wendy provided excellent service w for our house cleaning. He removed some really rough rust stains. Great company!",
+          name: "Chris Rosado",
+          time: "4 months ago",
+          back: "bg-[#2F89D4]",
+        },
+        {
+          content:
+            "I have Steve yesterday and today and he did a great job! He soft washed the entire house and cleaned all the windows. He also cleaned and sealed my patio and driveway pavers, they look super beautiful just like brand new installed! I highly recommend Steve and his company!",
+          name: "Victoria Perlaza",
+          time: "5 months ago",
+          back: "bg-[#7B909D]",
+        },
+        {
+          content:
+            "Steve stripped and resealed my pavers after we extended our driveway. He did a great job and was very professional. Lots of neighbors have also used his paver sealing services and had great results.",
+          name: "Fabiana Diaz",
+          time: "5 months ago",
+          back: "bg-[#7720A4]",
+        },
+      ],
+      button: {
+        label: "VIEW ALL REVIEWS ON GOOGLE",
+        href: "#",
+      },
+    },
+  },
+  about: {
+  },
+  contact: {
+    hero: {
+      video: "",
+      title:
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br/> Sealing</span> Experts',
+      description: "A Service You Can Trust",
+      buttons: [
+        {
+          label: "Call Now",
+          href: "tel:+14078448104",
+          buttonColor: "bg-accent",
+          textColor: "text-primary",
+        },
+        {
+          label: "Get An Estimate Now",
+          href: "#",
+          buttonColor: "border-[1.5px] border-white",
+          textColor: "text-white",
+        },
+      ],
+      imageHero: "main-hero",
+    },
+  },
   footer: {
     description:
       "At Steve’s Premium Pressure Washing, we specialize in residential <br/> and commercial exterior cleaning. Proudly serving Orlando, Saint <br/> Cloud, Kissimmee, Winter Park, and Lake Nona.",
