@@ -2,6 +2,7 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Contact from '../../../sections/Contact.astro';
 import Estimate from '../../../sections/main/Estimate.astro';
 import Hero from '../../../sections/main/Hero.astro';
 
@@ -18,5 +19,6 @@ const t = translations[lang];
 ---
 <Layout lang={lang} t={t}>
    <Hero content={t.contact.hero} />
+   <Contact content={t.contact.contact}/>
    <Estimate content={t.main.estimate} />
 </Layout>

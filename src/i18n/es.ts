@@ -39,7 +39,7 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br/> Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure /> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
@@ -56,6 +56,7 @@ export default {
         },
       ],
       imageHero: "main-hero",
+      imagePhone: "main-hero-sm",
     },
     solutions: {
       section1: {
@@ -139,8 +140,7 @@ export default {
     difference: {
       tag: "EXPERT SERVICE",
       title: 'The <span class="text-secondary">Steve’s</span> Difference',
-      subtitle:
-        "Premium Pressure Washing & Paver Sealing That Makes a Visible Impact in Orlando",
+      subtitle: "Premium Pressure Washing & Paver Sealing That Makes a Visible Impact in Orlando",
       description:
         "We turn dirty, stained, and weathered outdoor surfaces into clean, vibrant, and welcoming spaces. As a proud local family business, our team provides expert consultation and tailored services to meet your specific requirements. We are committed to delivering top notch service and a spotless experience, without breaking the bank.",
       buttons: [
@@ -309,7 +309,7 @@ export default {
     },
     estimate: {
       title:
-        "Ready to <span class='text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+        "Ready to <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
       description:
         "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
       button: {
@@ -409,8 +409,9 @@ export default {
   servicesPage: {
     hero: {
       img: "services-hero",
+      imagePhone: "services-hero-sm",
       title:
-        "Our Professional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br/> Services </span>",
+        "Our Professional <br/> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br/> Services </span>",
       description:
         "From cozy homes to large commercial complexes, Steve’s <br/> Premium Pressure Washing delivers spotless results across <br/> Orlando.",
       buttons: [
@@ -443,16 +444,14 @@ export default {
         image: "residential",
         tag: "premium care",
         title: "Residential",
-        description:
-          " Protecting your home’s value with specialized exterior care.",
+        description: " Protecting your home’s value with specialized exterior care.",
         href: "residential",
       },
       {
         image: "commercial",
         tag: "professional grade",
         title: "Commercial",
-        description:
-          " Expert solutions to maintain a professional and safe business environment.",
+        description: " Expert solutions to maintain a professional and safe business environment.",
         href: "commercial",
       },
     ],
@@ -506,6 +505,7 @@ export default {
     residential: {
       hero: {
         img: "residential-hero",
+        imagePhone: "residential-hero-sm",
         title:
           "Professional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Home <br/> Restoration </span> In <br/> Orlando",
         description:
@@ -553,8 +553,7 @@ export default {
           {
             image: "solution3",
             title: "Patio & Driveway Cleaning",
-            description:
-              "Powerful equipment to remove oil stains, tire marks, and built-up grime.",
+            description: "Powerful equipment to remove oil stains, tire marks, and built-up grime.",
           },
           {
             image: "solution6",
@@ -565,8 +564,7 @@ export default {
           {
             image: "solution7",
             title: "Fence Pressure Washing",
-            description:
-              "Restores the appearance of wooden, vinyl, or metal fences.",
+            description: "Restores the appearance of wooden, vinyl, or metal fences.",
           },
           {
             image: "solution8",
@@ -579,13 +577,13 @@ export default {
       contact: {
         tag: "Fast & Easy Process",
         title:
-          'Tell Us About <br/> <span class="text-secondary text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+          'Tell Us About <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
         description:
           "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
       },
       estimate: {
         title:
-          "Ready to <span class='text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+          "Ready to <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
         description:
           "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
         button: {
@@ -600,6 +598,7 @@ export default {
     commercial: {
       hero: {
         img: "commercial-hero",
+        imagePhone: "commercial-hero-sm",
         title:
           "<span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Commercial <br/> Commercial </span> For <br/> Business <br/> Excellence",
         description:
@@ -649,13 +648,13 @@ export default {
       contact: {
         tag: "Fast & Easy Process",
         title:
-          'Tell Us About <br/> <span class="text-secondary text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+          'Tell Us About <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
         description:
           "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
       },
       estimate: {
         title:
-          "Ready to <span class='text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+          "Ready to <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
         description:
           "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
         button: {
@@ -672,7 +671,7 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br/> Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
@@ -689,6 +688,7 @@ export default {
         },
       ],
       imageHero: "main-hero",
+      imagePhone: "main-hero-sm",
     },
     images: {
       title: "Project Gallery",
@@ -750,12 +750,95 @@ export default {
     },
   },
   about: {
+    hero: {
+      title: "About Steve’s <br/> Premium <br/> Pressure washing",
+      stadistic: [
+        {
+          title: "100%",
+          description: "SATISFACTION",
+        },
+        {
+          title: "Orlando",
+          description: "Local Experts",
+        },
+      ],
+      image: "about-hero",
+      imagePhone: "about-hero-sm",
+    },
+    story: {
+      tag: "OUR STORY",
+      title:
+        "Excellence in Residential & <br/> <span class='text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title'>Commercial Cleaning</span>",
+      description:
+        "Steve's Premium Pressure Washing is a professional residential and commercial cleaning company that specializes in pressure washing services. Our team has years of experience and expertise to effectively clean all types of buildings, from small businesses to large commercial and residential properties. <br/> <br/> We pride ourselves on providing high-quality services and exceptional customer service to our clients.",
+      button: {
+        label: "GET A FREE ESTIMATE",
+        href: "#",
+        bgColor: "bg-accent",
+        textColor: "text-primary",
+        icon: "arrow",
+      },
+    },
+    commitment: {
+      tag: "OUR commitment",
+      title:
+        "“To provide <span class='text-accent text-[24px] sm:text-[48px] font-medium leading-[125%] font-title'>top-notch pressure washing services</span> that exceed expectations, maintaining professional business appearances and enhancing residential curb appeal.”",
+    },
+    our: {
+      title: "Meet Our Professionals",
+      items: [
+        {
+          title: "Unmatched Excellence",
+          description:
+            "Our crew approaches every job with a commitment to perfection, ensuring no spot is left untouched",
+        },
+        {
+          title: "Ongoing Education",
+          description:
+            "We stay ahead of industry standards by constantly training on the latest safety protocols and cleaning techniques.",
+        },
+        {
+          title: "Attention to Detail",
+          description:
+            "From delicate siding to rugged industrial concrete, we treat every surface with the specific care it requires.",
+        },
+      ],
+    },
+    choose: {
+      title: "Why Choose us?",
+      items: [
+        {
+          icon: "check-3",
+          title: "Experience",
+          description:
+            "With years of experience in the industry, we have the knowledge and expertise to effectively clean all types of buildings and surfaces.",
+        },
+        {
+          icon: "money",
+          title: "Competitive Pricing",
+          description:
+            "We offer competitive pricing for our services, ensuring that you get the best value for your money.",
+        },
+        {
+          icon: "tool",
+          title: "Professional Equipment",
+          description:
+            "Our team is equipped with industrial-grade pressure washers and specialized tools to ensure a thorough and efficient cleaning process.",
+        },
+        {
+          icon: "happy",
+          title: "Customer Service",
+          description:
+            "We prioritize our client's satisfaction and strive to provide exceptional customer service from start to finish.",
+        },
+      ],
+    },
   },
   contact: {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br/> Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
@@ -772,6 +855,30 @@ export default {
         },
       ],
       imageHero: "main-hero",
+      imagePhone: "main-hero-sm",
+    },
+    contact: {
+      tag: "Fast & Easy Process",
+      title:
+        'Ways You <span class="text-secondary text-[32px] sm:text-[56px] font-medium leading-[110%] capitalize font-title text-start">Can <br class="hidden sm:block"/> Reach Out</span>',
+      description: "Contact us today and an expert consultant will assist you.",
+      items: [
+        {
+          icon: "phone-2",
+          label: "407 -  844 - 8104",
+          href: "tel:+14078448104",
+        },
+        {
+          icon: "mail-2",
+          label: "@",
+          href: "#",
+        },
+        {
+          icon: "clock",
+          label: "All week: 8:00am - 8:00pm",
+          href: "",
+        },
+      ],
     },
   },
   footer: {

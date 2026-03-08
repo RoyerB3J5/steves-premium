@@ -1,19 +1,30 @@
 ---
-import en from '../../../i18n/en';
-import es from '../../../i18n/es';
-import Layout from '../../../layouts/Layout.astro';
-
-import type { Language } from '../../../types/language.type';
+import en from "../../../i18n/en";
+import es from "../../../i18n/es";
+import Layout from "../../../layouts/Layout.astro";
+import Commitment from "../../../sections/about/Commitment.astro";
+import Hero from "../../../sections/about/Hero.astro";
+import Story from "../../../sections/about/Story.astro";
+import Our from "../../../sections/about/Our.astro";
+import Choose from "../../../sections/about/Choose.astro";
+import type { Language } from "../../../types/language.type";
+import Estimate from "../../../sections/main/Estimate.astro";
 export function getStaticPaths() {
-  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 
-export const defaultRedirect = '/en';
+export const defaultRedirect = "/en";
 
 const lang = Astro.params.lang as Language;
 const translations = { es, en };
 const t = translations[lang];
 ---
+
 <Layout lang={lang} t={t}>
- 
+  <Hero content={t.about.hero} />
+  <Story content={t.about.story} />
+  <Commitment content={t.about.commitment} />
+  <Our content={t.about.our} />
+  <Choose content={t.about.choose} />
+  <Estimate content={t.main.estimate} />
 </Layout>

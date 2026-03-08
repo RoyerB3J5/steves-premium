@@ -38,7 +38,7 @@ const lang = match ? match[1] : 'en';
           alt="Logo de Steve's Premium Pressure Wash"
           width="355"
           height="64"
-          class="cursor-pointer w-30 sm:w-88.75 h-auto block"
+          class="cursor-pointer w-52 sm:w-88.75 h-auto block"
         />
     </a>
     <!-- Menú desktop (lg y arriba) -->
@@ -99,7 +99,7 @@ const lang = match ? match[1] : 'en';
           target="_blank"
           extraBtnClass={`bg-accent hover:bg-accent/90 hidden lg:flex`}
       />
-      <div class="flex justify-center items-center gap-1">
+      <div class="sm:flex justify-center items-center gap-1 hidden ">
         <img src="/images/phone.svg" alt="Telefono de contacto" width="24" height="24" class="w-6 h-6" />
         <a href="tel:4078448104" class="text-[14px] font-semibold leading-[150%] text-white hover:text-secondary transition-all duration-300 ease-in-out">407 - 844 -8104</a>
       </div>
@@ -112,7 +112,7 @@ const lang = match ? match[1] : 'en';
             class="flex items-center justify-center cursor-pointer"
             id="hamburger-btn"
           >
-            <Icon name={'hamburger'} class={'w-3.5 h-3.5 text-white'} aria-hidden="true" />
+            <Icon name={'hamburger'} class={'w-4.5 h-3 text-white'} aria-hidden="true" />
             <span class="sr-only">Abrir menú de navegación</span>
           </button>
       </div>
@@ -148,10 +148,10 @@ const lang = match ? match[1] : 'en';
           alt="Logo de Steve's Premium Pressure Wash"
           width="355"
           height="64"
-          class="cursor-pointer w-40 h-auto block"
+          class="cursor-pointer w-70 h-auto block"
         />
     </a>
-  <nav >
+  <nav class="w-full">
     <ul class="relative flex items-center flex-col justify-center w-full">
       {
         content?.nav.map((item, index) => {
@@ -162,7 +162,7 @@ const lang = match ? match[1] : 'en';
           const isLocations = index === 0;
           return (
             <li
-              class={`flex flex-col items-center justify-center group gap-3.5 px-0 w-full py-5 text-center text-primary dark:text-paragraph-dark ${isLocations ? 'relative' : ''} ${isActive ? 'bg-accent text-primary dark:text-paragraph-dark uppercase' : ''}`}
+              class={` flex flex-col items-center justify-center group gap-3.5 px-0 w-full py-5 text-center text-white  ${isLocations ? 'relative' : ''} ${isActive ? 'bg-primary text-white uppercase' : ''}`}
               id={`mobile-items-${index}`}
             >
               <a

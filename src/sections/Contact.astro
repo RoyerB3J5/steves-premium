@@ -1,0 +1,35 @@
+---
+type Translations = typeof import('../i18n/en').default;
+type ContactContent = Translations['contact']['contact'];
+interface Props {
+  content: ContactContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col sm:flex-row justify-center items-center gap-6 pt-20 sm:pt-15 pb-20 sm:pb-30">
+  <div class="flex flex-col justify-center items-start gap-10 w-full sm:w-1/2">
+    <div class="flex flex-col justify-center items-start gap-4">
+      <div class="py-1 px-3 flex justify-center items-center rounded-2xl bg-secondary/10 ">
+        <p class="text-primary text-[14px] font-semibold leading-[150%] uppercase text-center">{content.tag}</p>
+      </div>
+      <h2 set:html={content.title} class="text-primary text-[32px] sm:text-[56px] font-medium leading-[110%] capitalize font-title text-start"></h2>
+      <p class="text-paragraph text-[14px] font-normal leading-[150%] text-start">{content.description}</p>
+      <div class="flex flex-col justify-center items-start gap-4">
+        {
+          content.items.map((item)=>( 
+            <div class="flex justify-start items-center gap-2">
+              <img src={`/images/${item.icon}.svg`} alt="Icono de contacto" width="16" height="16" class="w-6 h-6 "/>
+              <a href={item.href} class="text-[14px] text-primary font-semibold leading-[160%] cursor-pointer hover:text-accent hover:font-bold transition-all duration-300 ease-in-out">{item.label}</a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="rounded-3xl relative overflow-hidden aspect-588/660 w-full h-auto">
+      <img src="/images/maps.webp" alt="Imagen de formulario" width="588" height="660" class="absolute object-cover object-top inset-0 w-full h-full">
+    </div>
+  </div>
+  <div class="w-full sm:w-1/2 h-full bg-secondary rounded-3xl">
+
+  </div>
+</section>

@@ -1,8 +1,8 @@
 ---
-import Button from "../components/Button.astro";
+import Button from "../../components/Button.astro";
 
-type Translations = typeof import("../i18n/en").default;
-type HeroContent = Translations["servicesPage"]["hero"];
+type Translations = typeof import("../../i18n/en").default;
+type HeroContent = Translations["about"]["hero"];
 interface Props {
   content: HeroContent;
 }
@@ -11,11 +11,11 @@ const { content } = Astro.props as Props;
 
 <section class="w-full flex items-center justify-center relative overflow-hidden">
   <img
-    src={`/images/${content.img}.webp`}
+    src={`/images/${content.image}.webp`}
     alt={content.title}
     width="2100"
     height="1358"
-    class="absolute inset-0 w-full h-full object-cover object-[50%_50%] -z-20 sm:block hidden"
+    class="hidden sm:block absolute inset-0 w-full h-full object-cover object-[50%_50%] -z-20"
     loading="eager"
     decoding="async"
   />
@@ -31,26 +31,11 @@ const { content } = Astro.props as Props;
   <div
     class="w-full max-w-screen md:max-w-7xl flex flex-row justify-center sm:justify-start items-end sm:items-center px-5 xl:px-0 h-dvh md:h-[90vh] lg:h-screen pb-10 sm:pb-0"
   >
-    <div
-      class="flex flex-col justify-end sm:justify-center items-center sm:items-start gap-4 3xl:gap-8 translate-y-0 sm:translate-y-[8%]"
-    >
+    <div class="flex flex-col justify-center items-center sm:items-start gap-4 3xl:gap-8 translate-y-0 sm:translate-y-[8%]">
       <h1
         set:html={content.title}
         class="text-white text-[32px] sm:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title text-center sm:text-start"
       />
-      <p class="text-white text-[16px] font-normal leading-[150%] text-center sm:text-start" set:html={content.description} />
-      <div class="flex justify-center items-center gap-4.5">
-        {
-          content.buttons.map((button) => (
-            <Button
-              text={button.label}
-              href={button.href}
-              extraBtnClass={button.buttonColor}
-              textClass={button.textColor}
-            />
-          ))
-        }
-      </div>
       <div class="w-64.25 h-px bg-white"></div>
       <div class="flex jutify-start itmes-center gap-14">
         {

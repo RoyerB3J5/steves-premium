@@ -1,0 +1,31 @@
+---
+type Translations = typeof import('../../i18n/en').default;
+type ChooseContent = Translations['about']['choose'];
+interface Props {
+  content: ChooseContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full flex justify-center items-center bg-secondary/5">
+  <div class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-16 py-20">
+    <div class="flex flex-col justify-center items-center gap-4">
+      <h2 class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-center" set:html={content.title}></h2>
+      <div class="w-21.5 h-1.5 rounded-sm bg-secondary"></div>
+    </div>
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      {
+        content.items.map((item)=>( 
+          <div class="flex flex-col justify-between items-start gap-8 bg-white px-4 sm:px-8 py-8 sm:py-16 rounded-3xl box-container border border-secondary/15 h-full">
+            <div class="w-10 h-10 rounded-lg bg-secondary/10 flex justify-center items-center shrink-0">
+              <img src={`/images/${item.icon}.svg`} alt="Icono de Eleccion" class="w-6 h-6"/>
+            </div>
+            <div class="flex flex-col justify-start items-start gap-2 h-full">
+              <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
+              <p class="text-paragraph text-[14px] font-normal leading-[150%] flex-1">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
