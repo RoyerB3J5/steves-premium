@@ -2,35 +2,35 @@ export default {
   header: {
     nav: [
       {
-        label: 'Services <span class="text-[16px] ml-px text-accent">▾</span>',
+        label: 'Servicios <span class="text-[16px] ml-px text-accent">▾</span>',
         href: "/services",
       },
       {
-        label: "Gallery",
+        label: "Galería",
         href: "/gallery",
       },
       {
-        label: "About",
+        label: "Nosotros",
         href: "/about",
       },
       {
-        label: "Contact",
+        label: "Contacto",
         href: "/contact",
       },
     ],
     services: [
       {
-        label: "Residential",
+        label: "Residencial",
         href: "residential",
       },
       {
-        label: "Commercial",
+        label: "Comercial",
         href: "commercial",
       },
     ],
     buttons: [
       {
-        label: "Get Estimate",
+        label: "Obtener Presupuesto",
         href: "#",
       },
     ],
@@ -39,17 +39,17 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure /> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
-      description: "A Service You Can Trust",
+        'Expertos en <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a Presión /> & Sellado de <br class="hidden sm:block"/> Adoquines</span> Premium',
+      description: "Un Servicio en el que Puedes Confiar",
       buttons: [
         {
-          label: "Call Now",
+          label: "Llamar Ahora",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Get An Estimate Now",
+          label: "Obtener Presupuesto Ahora",
           href: "#",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
@@ -60,25 +60,25 @@ export default {
     },
     solutions: {
       section1: {
-        tag: "orldando‘s premier exterior cleaning",
+        tag: "La limpieza exterior premier de Orlando",
         title:
-          'Complete Residential &  <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Commercial</span> Pressure Washing Services',
+          'Servicios Completos de Lavado a Presión <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Residencial & Comercial</span>',
         items: [
           {
             icons: "calendar",
-            title: "Ready when you need it",
-            description: "Flexible scheduling available",
+            title: "Disponible cuando lo necesites",
+            description: "Horarios flexibles disponibles",
           },
           {
             icons: "money",
-            title: "No hidden fees",
-            description: "Transparent upfront pricing",
+            title: "Sin costos ocultos",
+            description: "Precios transparentes por adelantado",
           },
         ],
         description: {
-          title: "Top-Quality Exterior Cleaning Tailored to Your Property.",
+          title: "Limpieza Exterior de Alta Calidad Personalizada para tu Propiedad.",
           content:
-            "Whether it's your family home or your business, Steve’s Premium Pressure Washing restores your property's curb appeal. We use professional equipment and techniques for a spotless experience, serving Orlando, Kissimmee, and surrounding areas.",
+            "Ya sea tu hogar familiar o tu negocio, Steve's Premium Pressure Washing restaura el atractivo de tu propiedad. Utilizamos equipos profesionales y técnicas avanzadas para una experiencia impecable, sirviendo a Orlando, Kissimmee y áreas circundantes.",
           items: [
             "Lake Nona",
             "Conway",
@@ -92,116 +92,117 @@ export default {
         },
       },
       section2: {
-        title: "Professional Solutions for <br/> every surface",
+        title: "Soluciones Profesionales para <br/> cada superficie",
         items: [
           {
             image: "solution1",
-            title: "Paver Sealing",
-            description: "Protect and enhance your stone surfaces.",
+            title: "Sellado de Adoquines",
+            description: "Protege y realza tus superficies de piedra.",
           },
           {
             image: "solution2",
-            title: "House Washing",
-            description: "Soft wash technology for a safe deep clean.",
+            title: "Lavado de Casa",
+            description: "Tecnología de lavado suave para una limpieza profunda segura.",
           },
           {
             image: "solution3",
-            title: "Patio & Driveway",
-            description: "Remove oil stains and grime effectively.",
+            title: "Patio y Entrada",
+            description: "Elimina manchas de aceite y suciedad efectivamente.",
           },
           {
             image: "solution4",
-            title: "Building Washing",
-            description: "Maintain a professional business exterior.",
+            title: "Lavado de Edificios",
+            description: "Mantén una fachada empresarial profesional.",
           },
           {
             image: "solution5",
-            title: "Parking Lot & Garage",
-            description: "Comprehensive commercial lot maintenance.",
+            title: "Estacionamiento y Garaje",
+            description: "Mantenimiento integral de lotes comerciales.",
           },
           {
             image: "solution6",
-            title: "Deck Washing",
-            description: "Restore the natural beauty of your wood.",
+            title: "Lavado de Terraza",
+            description: "Restaura la belleza natural de tu madera.",
           },
           {
             image: "solution7",
-            title: "Fence Washing",
-            description: "Renew privacy fences and partitions",
+            title: "Lavado de Cercas",
+            description: "Renueva cercas de privacidad y divisiones",
           },
           {
             image: "solution8",
-            title: "Gutter Cleaning",
-            description: "Essential maintenance for water flow.",
+            title: "Limpieza de Canaletas",
+            description: "Mantenimiento esencial para el flujo de agua.",
           },
         ],
       },
     },
     difference: {
-      tag: "EXPERT SERVICE",
-      title: 'The <span class="text-secondary">Steve’s</span> Difference',
-      subtitle: "Premium Pressure Washing & Paver Sealing That Makes a Visible Impact in Orlando",
+      tag: "SERVICIO EXPERTO",
+      title: "La <span class='text-secondary'>Diferencia de Steve's</span>",
+      subtitle:
+        "Lavado a Presión & Sellado de Adoquines Premium que Genera un Impacto Visible en Orlando",
       description:
-        "We turn dirty, stained, and weathered outdoor surfaces into clean, vibrant, and welcoming spaces. As a proud local family business, our team provides expert consultation and tailored services to meet your specific requirements. We are committed to delivering top notch service and a spotless experience, without breaking the bank.",
+        "Transformamos superficies exteriores sucias, manchadas y desgastadas en espacios limpios, vibrantes y acogedores. Como un negocio familiar local orgulloso, nuestro equipo proporciona consultoría experta y servicios personalizados para cumplir con tus requisitos específicos. Estamos comprometidos a entregar un servicio de primera calidad y una experiencia impecable, sin romper el banco.",
       buttons: [
         {
-          label: "Call Now",
+          label: "Llamar Ahora",
           href: "tel:+14078448104",
           buttonColor: "bg-primary",
           textColor: "text-white",
         },
         {
-          label: "Get An Estimate Now",
+          label: "Obtener Presupuesto Ahora",
           href: "#",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
       ],
       info: {
-        title: "years of <br/> experience",
+        title: "años de <br/> experiencia",
         items: [
           {
             icon: "check",
-            label: "Satisfaction Guaranteed",
+            label: "Satisfacción Garantizada",
           },
           {
             icon: "money-2",
-            label: "No Hidden Costs",
+            label: "Sin Costos Ocultos",
           },
           {
             icon: "fast",
-            label: "Fast and Easy Process",
+            label: "Proceso Rápido y Fácil",
           },
         ],
       },
       projects: {
-        title: "Project Spotlight",
-        description: "Witness the transformation our team delivers every day.",
+        title: "Proyecto Destacado",
+        description: "Presencia de la transformación que nuestro equipo entrega cada día.",
       },
     },
     choose: {
-      title: "Why Choose Us",
+      title: "Por Qué Nos Eliges",
       items: [
         {
           image: "choose1",
           icon: "house",
-          title: "Satisfaction Guaranteed",
+          title: "Satisfacción Garantizada",
           description:
-            "Committed to delivering top notch service with no hidden costs and transparent estimates.",
+            "Comprometidos a entregar un servicio de primera calidad sin costos ocultos y presupuestos transparentes.",
         },
         {
           image: "choose2",
           icon: "shield",
-          title: "Local Family Business",
+          title: "Negocio Familiar Local",
           description:
-            "Woman owned and operated, proudly delivering spotless results to our Orlando community.5",
+            "Dirigido y operado por mujeres, entregando proudly resultados impecables a nuestra comunidad de Orlando.5",
         },
         {
           image: "choose3",
           icon: "discount",
-          title: "Special Discounts",
+          title: "Descuentos Especiales",
           description:
-            "We proudly offer discounts for Military, Emergency Responders, and Seniors.",
+            "Ofrecemos con orgullo descuentos para militares, socorristas de emergencia y personas mayores.",
         },
       ],
     },
@@ -238,17 +239,17 @@ export default {
         },
       ],
       button: {
-        label: "VIEW ALL REVIEWS ON GOOGLE",
+        label: "VER TODAS LAS RESEÑAS EN GOOGLE",
         href: "#",
       },
     },
     share: {
       title:
-        'Share Quality. <br class="hidden md:block"/> <span class="text-accent text-[32px] sm:text-[48px] lg:text-[56px] font-title font-medium leading-[110%] capitalize">Build Trust.</span>',
+        'Comparte Calidad. <br class="hidden md:block"/> <span class="text-accent text-[32px] sm:text-[48px] lg:text-[56px] font-title font-medium leading-[110%] capitalize">Construye Confianza.</span>',
       description:
-        "If you’ve worked with Steve's Premium Pressure Washing, you know the spotless results we deliver. Many of our new clients come from referrals because a clean, revitalized property speaks for itself. <br/> <br/> If you know a neighbor, friend, or business in Orlando and surrounding areas who needs expert pressure washing or paver sealing, send them our way. We’d love to help!",
+        "Si has trabajado con Steve's Premium Pressure Washing, ya conoces los resultados impecables que ofrecemos. Muchos de nuestros nuevos clientes vienen de referencias porque una propiedad limpia y revitalizada habla por sí sola. <br/> <br/> Si conoces un vecino, amigo o negocio en Orlando y áreas circundantes que necesite lavado a presión experto o sellado de adoquines, envíanoslos. ¡Nos encantaría ayudar!",
       button: {
-        label: "Click Here to Refer a Neighbor",
+        label: "Haz Clic Aquí para Referir un Vecino",
         href: "#",
         bgColor: "bg-accent py-4 md:py-3 ",
         textColor: "text-primary",
@@ -256,43 +257,43 @@ export default {
       },
       content: {
         title: "PREMIUM",
-        description: "A clean, revitalized <br/> property speaks for itself.",
+        description: "Una propiedad limpia y revitalizada habla por sí sola.",
       },
     },
     information: {
       process: {
-        title: "Our Quick & Easy Process",
+        title: "Nuestro Proceso Rápido y Fácil",
         items: [
           {
-            step: "Step 01",
-            title: "Request Quote",
+            step: "Paso 01",
+            title: "Solicitar Presupuesto",
             description:
-              "Fill out our form to request a hassle-free, no-obligation pressure washing quote. Our process is quick and easy!",
+              "Completa nuestro formulario para solicitar un presupuesto de lavado a presión sin obligaciones. ¡Nuestro proceso es rápido y fácil!",
             icon: "cell",
           },
           {
-            step: "Step 02",
-            title: "Schedule an Appointment",
+            step: "Paso 02",
+            title: "Programar Cita",
             description:
-              "Once you are ready to move forward, we will schedule a convenient appointment time.",
+              "Una vez que estés listo para continuar, programaremos un horario de cita conveniente.",
             icon: "calendar",
           },
           {
-            step: "step 03",
-            title: "Professional Cleaning",
+            step: "paso 03",
+            title: "Limpieza Profesional",
             description:
-              "Our team will use professional equipment and proper technique to wash away grime!",
+              "¡Nuestro equipo usará equipos profesionales y técnica adecuada para limpiar la suciedad!",
             icon: "constelation",
           },
         ],
       },
       advice: {
         title:
-          "Need <span class='text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title'>Expert Advice?</span>",
+          "Necesitas <span class='text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title'>Asesoría Experta?</span>",
         description:
-          "We don't believe in cookie cutter pricing. Every home and business is different. That’s why we provide personalized service; just provide us with basic information, and our team will tailor our services to meet your exact requirements.<br/> <br/> Get a transparent estimate so you know exactly what to expect with zero hidden costs.",
+          "No creemos en precios estándar. Cada hogar y negocio es diferente. Por eso ofrecemos servicio personalizado; solo proporciona información básica, y nuestro equipo adaptará nuestros servicios a tus requisitos exactos.<br/> <br/> Obtén un presupuesto transparente para que sepas exactamente qué esperar sin costos ocultos.",
         button: {
-          label: "GET YOUR FREE ESTIMATE",
+          label: "OBTENER TU PRESUPUESTO GRATIS",
           href: "#",
           bgColor: "bg-accent",
           textColor: "text-primary",
@@ -301,19 +302,19 @@ export default {
       },
     },
     contact: {
-      tag: "Fast & Easy Process",
+      tag: "Proceso Rápido y Fácil",
       title:
-        'Tell Us About <br class="hidden sm:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+        'Cuéntanos Acerca de <br class="hidden sm:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
       description:
-        "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
+        "Comparte algunos detalles y estás en camino a una propiedad más limpia. Completa nuestro formulario para un presupuesto de lavado a presión sin complicaciones y sin obligación. Si puedes, carga una foto del área para que podamos proporcionar asesoramiento experto y recomendaciones de inmediato.",
     },
     estimate: {
       title:
-        "Ready to <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+        "¿Listo para <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restaurar la Apariencia</span> <br/> de tu Propiedad?",
       description:
-        "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
+        "En Steve's Premium Pressure Washing, transformamos superficies sucias y desgastadas en espacios limpios y acogedores. Permite que traigamos servicio de primera calidad, equipos profesionales y una experiencia impecable a tu hogar o negocio.",
       button: {
-        label: "GET A FREE ESTIMATE",
+        label: "OBTENER UN PRESUPUESTO GRATIS",
         href: "#",
         bgColor: "bg-accent",
         textColor: "text-primary",
@@ -321,26 +322,26 @@ export default {
       },
     },
     services: {
-      title: "What We Wash",
+      title: "Lo Que Lavamos",
       items: [
         {
-          title: "Residential",
+          title: "Residencial",
           image: "residential",
           href: "residential",
         },
         {
-          title: "Commercial",
+          title: "Comercial",
           image: "commercial",
           href: "commercial",
         },
       ],
-      tag: "years of <br/> experience",
+      tag: "años de <br/> experiencia",
     },
     projects: {
       title:
-        'Check out our recent <br/> <span class="text-secondary font-title text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize">completed Projects</span>',
+        'Echa un vistazo a nuestros recientes <br/> <span class="text-secondary font-title text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize">Proyectos Completados</span>',
       button: {
-        label: "View All Projects",
+        label: "Ver Todos los Proyectos",
         href: "#",
         bgColor: "bg-accent",
         textColor: "text-primary uppercase",
@@ -348,60 +349,60 @@ export default {
       },
       items: [
         {
-          title: "Paver Station",
+          title: "Estación de Adoquines",
           place: "Winter Park, FL",
           image: "project1",
         },
         {
-          title: "Full Exterior Soft Wash",
+          title: "Lavado Exterior Completo",
           place: "Lake Nola, FL",
           image: "project2",
         },
         {
-          title: "Premium Driveway Cleaning",
+          title: "Limpieza Premium de Entrada",
           place: "Windermere, FL",
           image: "project3",
         },
         {
-          title: "Paver Station",
+          title: "Estación de Adoquines",
           place: "Winter Park, FL",
           image: "project1",
         },
         {
-          title: "Full Exterior Soft Wash",
+          title: "Lavado Exterior Completo",
           place: "Lake Nola, FL",
           image: "project2",
         },
         {
-          title: "Premium Driveway Cleaning",
+          title: "Limpieza Premium de Entrada",
           place: "Windermere, FL",
           image: "project3",
         },
       ],
-      mediaDescription: "Follow Us For Spotless transformations",
-      socialMedia: "Follow Us on Instagram",
+      mediaDescription: "Síguenos Para Transformaciones Impecables",
+      socialMedia: "Síguenos en Instagram",
     },
     numbers: {
       items: [
         {
           number: "100%",
-          title: "satisfaction",
-          description: "Guaranteed Results",
+          title: "satisfacción",
+          description: "Resultados Garantizados",
         },
         {
           number: "5 Star",
-          title: "rated",
-          description: "By our customers",
+          title: "calificado",
+          description: "Por nuestros clientes",
         },
         {
           number: "Top Notch",
-          title: "equipment",
-          description: "& techniques",
+          title: "equipos",
+          description: "& técnicas",
         },
         {
           number: "100% Local",
-          title: "family owned",
-          description: "& operated",
+          title: "negocio familiar",
+          description: "& operado",
         },
       ],
     },
@@ -411,18 +412,18 @@ export default {
       img: "services-hero",
       imagePhone: "services-hero-sm",
       title:
-        "Our Professional <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br class='hidden sm:block'/> Services </span>",
+        "Nuestros Servicios <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Profesionales de <br class='hidden sm:block'/> Limpieza </span>",
       description:
-        "From cozy homes to large commercial complexes, Steve’s <br class='hidden sm:block'/> Premium Pressure Washing delivers spotless results across <br class='hidden sm:block'/> Orlando.",
+        "Desde hogares acogedores hasta grandes complejos comerciales, Steve's <br class='hidden sm:block'/> Premium Pressure Washing entrega resultados impecables en toda <br class='hidden sm:block'/> Orlando.",
       buttons: [
         {
-          label: "Call Now",
+          label: "Llamar Ahora",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Get An Estimate Now",
+          label: "Obtener Presupuesto Ahora",
           href: "#",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
@@ -431,27 +432,28 @@ export default {
       stadistic: [
         {
           title: "100%",
-          description: "SATISFACTION",
+          description: "SATISFACCIÓN",
         },
         {
           title: "Orlando",
-          description: "Local Experts",
+          description: "Expertos Locales",
         },
       ],
     },
     services: [
       {
         image: "residential",
-        tag: "premium care",
-        title: "Residential",
-        description: " Protecting your home’s value with specialized exterior care.",
+        tag: "cuidado premium",
+        title: "Residencial",
+        description: " Protegiendo el valor de tu hogar con cuidado exterior especializado.",
         href: "residential",
       },
       {
         image: "commercial",
-        tag: "professional grade",
-        title: "Commercial",
-        description: " Expert solutions to maintain a professional and safe business environment.",
+        tag: "grado profesional",
+        title: "Comercial",
+        description:
+          " Soluciones expertas para mantener un ambiente empresarial profesional y seguro.",
         href: "commercial",
       },
     ],
@@ -507,18 +509,18 @@ export default {
         img: "residential-hero",
         imagePhone: "residential-hero-sm",
         title:
-          "Professional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Home <br/> Restoration </span> In <br/> Orlando",
+          "Profesional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Restauración <br/> de Hogar </span> en <br/> Orlando",
         description:
-          "Pressure washing keeps your home clean and protected, <br/> removing grime from roofs, siding, and outdoor surfaces.",
+          "El lavado a presión mantiene tu hogar limpio y protegido, <br/> eliminando suciedad de techos, revestimientos y superficies exteriores.",
         buttons: [
           {
-            label: "Call Now",
+            label: "Llamar Ahora",
             href: "tel:+14078448104",
             buttonColor: "bg-accent",
             textColor: "text-primary",
           },
           {
-            label: "Get An Estimate Now",
+            label: "Obtener Presupuesto Ahora",
             href: "#",
             buttonColor: "border-[1.5px] border-white",
             textColor: "text-white",
@@ -527,50 +529,51 @@ export default {
         stadistic: [
           {
             title: "100%",
-            description: "SATISFACTION",
+            description: "SATISFACCIÓN",
           },
           {
             title: "Orlando",
-            description: "Local Experts",
+            description: "Expertos Locales",
           },
         ],
       },
       services: {
-        title: "Our Specialized Services",
+        title: "Nuestros Servicios Especializados",
         items: [
           {
             image: "solution1",
-            title: "Paver Sealing",
+            title: "Sellado de Adoquines",
             description:
-              "Protects against dirt, grime, and UV damage to keep pavers vibrant and durable.",
+              "Protege contra suciedad, grasa y daño UV para mantener adoquines vibrantes y duraderos.",
           },
           {
             image: "solution2",
-            title: "House Washing",
+            title: "Lavado de Casa",
             description:
-              "Gentle yet effective methods to remove mold, mildew, and stains from your home’s exterior.",
+              "Métodos suave pero efectivos para eliminar moho, hongos y manchas del exterior de tu hogar.",
           },
           {
             image: "solution3",
-            title: "Patio & Driveway Cleaning",
-            description: "Powerful equipment to remove oil stains, tire marks, and built-up grime.",
+            title: "Limpieza de Patio y Entrada",
+            description:
+              "Equipos potentes para eliminar manchas de aceite, marcas de llantas y suciedad acumulada.",
           },
           {
             image: "solution6",
-            title: "Deck Pressure Washing",
+            title: "Lavado a Presión de Terraza",
             description:
-              "Safely revives wood's natural beauty by removing dirt without damaging the surface.",
+              "Revive de manera segura la belleza natural de la madera eliminando suciedad sin dañar la superficie.",
           },
           {
             image: "solution7",
-            title: "Fence Pressure Washing",
-            description: "Restores the appearance of wooden, vinyl, or metal fences.",
+            title: "Lavado a Presión de Cerca",
+            description: "Restaura la apariencia de cercas de madera, vinilo o metal.",
           },
           {
             image: "solution8",
-            title: "Gutter Cleaning",
+            title: "Limpieza de Canaletas",
             description:
-              "Professional removal of debris to prevent water damage to your foundation and roof.",
+              "Eliminación profesional de escombros para prevenir daño de agua a tu cimentación y techo.",
           },
         ],
       },
@@ -600,9 +603,9 @@ export default {
         img: "commercial-hero",
         imagePhone: "commercial-hero-sm",
         title:
-          "<span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Commercial <br/> Commercial </span> For <br/> Business <br/> Excellence",
+          "<span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Comercial <br/> Comercial </span> Para <br/> Excelencia <br/> Empresarial",
         description:
-          "A clean exterior makes a strong first impression. Our <br/> commercial washing enhances your business’s safety and <br/> appearance.",
+          "Un exterior limpio hace una excelente primera impresión. Nuestro lavado <br/> comercial mejora la seguridad y <br/> apariencia de tu negocio.",
         buttons: [
           {
             label: "Call Now",
@@ -629,36 +632,36 @@ export default {
         ],
       },
       services: {
-        title: "Our Specialized Services",
+        title: "Nuestros Servicios Especializados",
         items: [
           {
             image: "solution4",
-            title: "Building Washing",
+            title: "Lavado de Edificios",
             description:
-              "Eliminates grime and stains from your business exterior for a pristine look.",
+              "Elimina suciedad y manchas del exterior de tu negocio para un aspecto impecable.",
           },
           {
             image: "solution5",
-            title: "Parking Lot & Garage Cleaning",
+            title: "Limpieza de Estacionamiento y Garaje",
             description:
-              "Thorough cleaning of concrete surfaces to ensure a safe and inviting environment.",
+              "Limpieza integral de superficies de concreto para garantizar un ambiente seguro e invitador.",
           },
         ],
       },
       contact: {
-        tag: "Fast & Easy Process",
+        tag: "Proceso Rápido y Fácil",
         title:
-          'Tell Us About <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+          'Cuéntanos Acerca de <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
         description:
-          "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
+          "Comparte algunos detalles y estás en camino a una propiedad más limpia. Completa nuestro formulario para un presupuesto de lavado a presión sin complicaciones y sin obligación. Si puedes, carga una foto del área para que podamos proporcionar asesoramiento experto y recomendaciones de inmediato.",
       },
       estimate: {
         title:
-          "Ready to <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+          "¿Listo para <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restaurar la Apariencia</span> <br/> de tu Propiedad?",
         description:
-          "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
+          "En Steve's Premium Pressure Washing, transformamos superficies sucias y desgastadas en espacios limpios y acogedores. Permite que traigamos servicio de primera calidad, equipos profesionales y una experiencia impecable a tu hogar o negocio.",
         button: {
-          label: "GET A FREE ESTIMATE",
+          label: "OBTENER UN PRESUPUESTO GRATIS",
           href: "#",
           bgColor: "bg-accent",
           textColor: "text-primary",
@@ -671,17 +674,17 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
-      description: "A Service You Can Trust",
+        'Expertos en <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a Presión <br/> & Sellado de Adoquines</span>',
+      description: "Un Servicio en el que Puedes Confiar",
       buttons: [
         {
-          label: "Call Now",
+          label: "Llamar Ahora",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Get An Estimate Now",
+          label: "Obtener Presupuesto Ahora",
           href: "#",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
@@ -691,7 +694,7 @@ export default {
       imagePhone: "main-hero-sm",
     },
     images: {
-      title: "Project Gallery",
+      title: "Galería de Proyectos",
       items: [
         "gallery-1",
         "gallery-2",
@@ -712,67 +715,67 @@ export default {
       ],
     },
     review: {
-      title: "the trust of our community",
+      title: "la confianza de nuestra comunidad",
       items: [
         {
           content:
-            "Steve takes great care in his work. Goes above and beyond without being asked. Wendy fielded a ton of questions without any hesitation. Both of them walk you through a job as if you were family. Will definitely call them back when we need them. Thanks to both for taking care of our pressuring washing on short notice!!",
+            "Steve tiene mucho cuidado en su trabajo. Va más allá de lo solicitado. Wendy respondió un montón de preguntas sin ninguna duda. Ambos te guían a través del trabajo como si fueras familia. Definitivamente los llamaremos cuando los necesitemos. ¡Gracias a ambos por cuidar nuestro lavado a presión con poco tiempo de aviso!!",
           name: "Britt",
-          time: "A month ago",
+          time: "Hace un mes",
           back: "bg-[#E33E7A]",
         },
         {
           content:
-            "Steve and Wendy provided excellent service w for our house cleaning. He removed some really rough rust stains. Great company!",
+            "Steve y Wendy proporcionaron un excelente servicio para la limpieza de nuestra casa. ¡Removió manchas de óxido muy difíciles. Excelente empresa!",
           name: "Chris Rosado",
-          time: "4 months ago",
+          time: "Hace 4 meses",
           back: "bg-[#2F89D4]",
         },
         {
           content:
-            "I have Steve yesterday and today and he did a great job! He soft washed the entire house and cleaned all the windows. He also cleaned and sealed my patio and driveway pavers, they look super beautiful just like brand new installed! I highly recommend Steve and his company!",
+            "¡Tuve a Steve ayer y hoy e hizo un trabajo excelente! Lavó suavemente toda la casa y limpió todas las ventanas. ¡También limpió y selló mis adoquines de patio y entrada, se ven hermoso como recién instalados! ¡Recomiendo altamente a Steve y su empresa!",
           name: "Victoria Perlaza",
-          time: "5 months ago",
+          time: "Hace 5 meses",
           back: "bg-[#7B909D]",
         },
         {
           content:
-            "Steve stripped and resealed my pavers after we extended our driveway. He did a great job and was very professional. Lots of neighbors have also used his paver sealing services and had great results.",
+            "Steve removió y reselló mis adoquines después de extender nuestra entrada. ¡Hizo un trabajo excelente y fue muy profesional. Muchos vecinos también han usado sus servicios de sellado de adoquines y tuvieron excelentes resultados.",
           name: "Fabiana Diaz",
-          time: "5 months ago",
+          time: "Hace 5 meses",
           back: "bg-[#7720A4]",
         },
       ],
       button: {
-        label: "VIEW ALL REVIEWS ON GOOGLE",
+        label: "VER TODAS LAS RESEÑAS EN GOOGLE",
         href: "#",
       },
     },
   },
   about: {
     hero: {
-      title: "About Steve’s <br/> Premium <br/> Pressure washing",
+      title: "Acerca de Steve's <br/> Premium <br/> Lavado a Presión",
       stadistic: [
         {
           title: "100%",
-          description: "SATISFACTION",
+          description: "SATISFACCIÓN",
         },
         {
           title: "Orlando",
-          description: "Local Experts",
+          description: "Expertos Locales",
         },
       ],
       image: "about-hero",
       imagePhone: "about-hero-sm",
     },
     story: {
-      tag: "OUR STORY",
+      tag: "NUESTRA HISTORIA",
       title:
-        "Excellence in Residential & <br/> <span class='text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title'>Commercial Cleaning</span>",
+        "Excelencia en Limpieza <br/> <span class='text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title'>Residencial & Comercial</span>",
       description:
-        "Steve's Premium Pressure Washing is a professional residential and commercial cleaning company that specializes in pressure washing services. Our team has years of experience and expertise to effectively clean all types of buildings, from small businesses to large commercial and residential properties. <br/> <br/> We pride ourselves on providing high-quality services and exceptional customer service to our clients.",
+        "Steve's Premium Pressure Washing es una empresa profesional de limpieza residencial y comercial que se especializa en servicios de lavado a presión. Nuestro equipo tiene años de experiencia y experiencia para limpiar efectivamente todo tipo de edificios, desde pequeños negocios hasta propiedades comerciales y residenciales grandes. <br/> <br/> Nos enorgullece proporcionar servicios de alta calidad y un servicio al cliente excepcional a nuestros clientes.",
       button: {
-        label: "GET A FREE ESTIMATE",
+        label: "OBTENER UN PRESUPUESTO GRATIS",
         href: "#",
         bgColor: "bg-accent",
         textColor: "text-primary",
@@ -780,56 +783,56 @@ export default {
       },
     },
     commitment: {
-      tag: "OUR commitment",
+      tag: "NUESTRO COMPROMISO",
       title:
-        "“To provide <span class='text-accent text-[24px] sm:text-[48px] font-medium leading-[125%] font-title'>top-notch pressure washing services</span> that exceed expectations, maintaining professional business appearances and enhancing residential curb appeal.”",
+        "“Ofrecer <span class='text-accent text-[24px] sm:text-[48px] font-medium leading-[125%] font-title'>servicios de lavado a presión de primera calidad</span> que superen expectativas, manteniendo apariencias profesionales de negocios y mejorando el atractivo de la entrada de propieda resid encial.”",
     },
     our: {
-      title: "Meet Our Professionals",
+      title: "Conoce a Nuestros Profesionales",
       items: [
         {
-          title: "Unmatched Excellence",
+          title: "Excelencia Inigualable",
           description:
-            "Our crew approaches every job with a commitment to perfection, ensuring no spot is left untouched",
+            "Nuestro equipo aborda cada trabajo con un compromiso con la perfección, asegurando que ninguna mancha se quede atrás",
         },
         {
-          title: "Ongoing Education",
+          title: "Educación Continua",
           description:
-            "We stay ahead of industry standards by constantly training on the latest safety protocols and cleaning techniques.",
+            "Nos mantenemos por delante del estándar de la industria al entrenar constantemente en los últimos protocolos de seguridad y técnicas de limpieza.",
         },
         {
-          title: "Attention to Detail",
+          title: "Atención al Detalle",
           description:
-            "From delicate siding to rugged industrial concrete, we treat every surface with the specific care it requires.",
+            "Desde revestimiento delicado hasta concreto industrial rugoso, tratamos cada superficie con el cuidado específico que requiere.",
         },
       ],
     },
     choose: {
-      title: "Why Choose us?",
+      title: "¿Por Qué Nos Eliges?",
       items: [
         {
           icon: "check-3",
-          title: "Experience",
+          title: "Experiencia",
           description:
-            "With years of experience in the industry, we have the knowledge and expertise to effectively clean all types of buildings and surfaces.",
+            "Con años de experiencia en la industria, tenemos el conocimiento y experiencia para limpiar efectivamente todo tipo de edificios y superficies.",
         },
         {
           icon: "money",
-          title: "Competitive Pricing",
+          title: "Precios Competitivos",
           description:
-            "We offer competitive pricing for our services, ensuring that you get the best value for your money.",
+            "Ofrecemos precios competitivos por nuestros servicios, asegurando que obtengas el mejor valor por tu dinero.",
         },
         {
           icon: "tool",
-          title: "Professional Equipment",
+          title: "Equipos Profesionales",
           description:
-            "Our team is equipped with industrial-grade pressure washers and specialized tools to ensure a thorough and efficient cleaning process.",
+            "Nuestro equipo está equipado con lavadores a presión de grado industrial y herramientas especializadas para garantizar un proceso de limpieza exhaustivo y eficiente.",
         },
         {
           icon: "happy",
-          title: "Customer Service",
+          title: "Servicio al Cliente",
           description:
-            "We prioritize our client's satisfaction and strive to provide exceptional customer service from start to finish.",
+            "Priorizamos la satisfacción de nuestros clientes y nos esforzamos por proporcionar un servicio al cliente excepcional de principio a fin.",
         },
       ],
     },
@@ -858,10 +861,10 @@ export default {
       imagePhone: "main-hero-sm",
     },
     contact: {
-      tag: "Fast & Easy Process",
+      tag: "Proceso Rápido y Fácil",
       title:
-        'Ways You <span class="text-secondary text-[32px] sm:text-[56px] font-medium leading-[110%] capitalize font-title text-start">Can <br class="hidden sm:block"/> Reach Out</span>',
-      description: "Contact us today and an expert consultant will assist you.",
+        'Formas en que Puedes <span class="text-secondary text-[32px] sm:text-[56px] font-medium leading-[110%] capitalize font-title text-start">Contactarnos</span>',
+      description: "Contáctanos hoy y un consultor experto te ayudará.",
       items: [
         {
           icon: "phone-2",
@@ -875,7 +878,7 @@ export default {
         },
         {
           icon: "clock",
-          label: "All week: 8:00am - 8:00pm",
+          label: "Toda la semana: 8:00am - 8:00pm",
           href: "",
         },
       ],
@@ -883,12 +886,12 @@ export default {
   },
   footer: {
     description:
-      "At Steve’s Premium Pressure Washing, we specialize in residential <br/> and commercial exterior cleaning. Proudly serving Orlando, Saint <br/> Cloud, Kissimmee, Winter Park, and Lake Nona.",
+      "En Steve's Premium Pressure Washing, nos especializamos en limpieza <br/> exterior residencial y comercial. Orgullosamente sirviendo a Orlando, Saint <br/> Cloud, Kissimmee, Winter Park y Lake Nona.",
     service: {
-      title: "SERVICE HOURS",
+      title: "HORARIOS DE SERVICIO",
       items: [
         {
-          title: "All week <br/> 8:00am - 8:00pm",
+          title: "Toda la semana <br/> 8:00am - 8:00pm",
           icon: "clock",
         },
       ],
