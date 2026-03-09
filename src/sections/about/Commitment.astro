@@ -7,7 +7,7 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <section class="w-full flex justify-center items-center bg-primary">
-  <div class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center gap-4 px-5 xl:px-0 py-20 sm:py-30">
+  <div class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center gap-4 px-5 xl:px-0 py-20 sm:py-30 animation-zoom">
     <div class="flex justify-center items-center px-3 py-1 rounded-2xl bg-[#001845]">
       <p class="text-white text-center text-[14px] font-semibold leading-[150%] uppercase">{content.tag}</p>
     </div>

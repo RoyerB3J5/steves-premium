@@ -120,12 +120,12 @@ export default {
             description: "Mantenimiento integral de lotes comerciales.",
           },
           {
-            image: "solution6",
+            image: "solution7",
             title: "Lavado de Terraza",
             description: "Restaura la belleza natural de tu madera.",
           },
           {
-            image: "solution7",
+            image: "solution6",
             title: "Lavado de Cercas",
             description: "Renueva cercas de privacidad y divisiones",
           },
@@ -458,47 +458,47 @@ export default {
       },
     ],
     solution: {
-      title: "Professional Solutions for <br/> every surface",
+      title: "Soluciones Profesionales para <br/> cada superficie",
       items: [
         {
           image: "solution1",
-          title: "Paver Sealing",
-          description: "Protect and enhance your stone surfaces.",
+          title: "Sellado de Adoquines",
+          description: "Protege y realza tus superficies de piedra.",
         },
         {
           image: "solution2",
-          title: "House Washing",
-          description: "Soft wash technology for a safe deep clean.",
+          title: "Lavado de Casa",
+          description: "Tecnología de lavado suave para limpieza profunda segura.",
         },
         {
           image: "solution3",
-          title: "Patio & Driveway",
-          description: "Remove oil stains and grime effectively.",
+          title: "Patio y Entrada",
+          description: "Elimina manchas de aceite y suciedad efectivamente.",
         },
         {
           image: "solution4",
-          title: "Building Washing",
-          description: "Maintain a professional business exterior.",
+          title: "Lavado de Edificios",
+          description: "Mantén una fachada empresarial profesional.",
         },
         {
           image: "solution5",
-          title: "Parking Lot & Garage",
-          description: "Comprehensive commercial lot maintenance.",
-        },
-        {
-          image: "solution6",
-          title: "Deck Washing",
-          description: "Restore the natural beauty of your wood.",
+          title: "Estacionamiento y Garaje",
+          description: "Mantenimiento integral de lotes comerciales.",
         },
         {
           image: "solution7",
-          title: "Fence Washing",
-          description: "Renew privacy fences and partitions",
+          title: "Lavado de Terraza",
+          description: "Restaura la belleza natural de tu madera.",
+        },
+        {
+          image: "solution6",
+          title: "Lavado de Cercas",
+          description: "Renueva cercas de privacidad y divisiones",
         },
         {
           image: "solution8",
-          title: "Gutter Cleaning",
-          description: "Essential maintenance for water flow.",
+          title: "Limpieza de Canaletas",
+          description: "Mantenimiento esencial para flujo de agua.",
         },
       ],
     },
@@ -559,14 +559,14 @@ export default {
               "Equipos potentes para eliminar manchas de aceite, marcas de llantas y suciedad acumulada.",
           },
           {
-            image: "solution6",
-            title: "Lavado a Presión de Terraza",
+            image: "solution7",
+            title: "Lavado Presión Terraza",
             description:
               "Revive de manera segura la belleza natural de la madera eliminando suciedad sin dañar la superficie.",
           },
           {
-            image: "solution7",
-            title: "Lavado a Presión de Cerca",
+            image: "solution6",
+            title: "Lavado Presión Cerca",
             description: "Restaura la apariencia de cercas de madera, vinilo o metal.",
           },
           {
@@ -578,19 +578,19 @@ export default {
         ],
       },
       contact: {
-        tag: "Fast & Easy Process",
+        tag: "Proceso Rápido y Fácil",
         title:
-          'Tell Us About <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+          'Cuéntanos Acerca de <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
         description:
-          "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
+          "Comparte algunos detalles y estás en camino a una propiedad más limpia. Completa nuestro formulario para un presupuesto de lavado sin complicaciones y sin obligación. Si puedes, carga una foto del área para que podamos proporcionar asesoramiento experto de inmediato.",
       },
       estimate: {
         title:
-          "Ready to <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restore the Look</span> <br/> of Your Property?",
+          "¿Listo para <span class='text-[32px] sm:text-[48px] lg:text-[56px] text-accent font-medium leading-[110%] capitalize font-title text-center'>Restaurar la Apariencia</span> <br/> de tu Propiedad?",
         description:
-          "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
+          "En Steve's Premium Pressure Washing, transformamos superficies sucias y desgastadas en espacios limpios y acogedores. Permite que traigamos servicio de primera calidad, equipos profesionales y una experiencia impecable a tu hogar o negocio.",
         button: {
-          label: "GET A FREE ESTIMATE",
+          label: "OBTENER UN PRESUPUESTO GRATIS",
           href: "#",
           bgColor: "bg-accent",
           textColor: "text-primary",
@@ -608,13 +608,13 @@ export default {
           "Un exterior limpio hace una excelente primera impresión. Nuestro lavado <br/> comercial mejora la seguridad y <br/> apariencia de tu negocio.",
         buttons: [
           {
-            label: "Call Now",
+            label: "Llamar Ahora",
             href: "tel:+14078448104",
             buttonColor: "bg-accent",
             textColor: "text-primary",
           },
           {
-            label: "Get An Estimate Now",
+            label: "Obtener Presupuesto Ahora",
             href: "#",
             buttonColor: "border-[1.5px] border-white",
             textColor: "text-white",
@@ -623,11 +623,11 @@ export default {
         stadistic: [
           {
             title: "100%",
-            description: "SATISFACTION",
+            description: "SATISFACCIÓN",
           },
           {
             title: "Orlando",
-            description: "Local Experts",
+            description: "Expertos Locales",
           },
         ],
       },
@@ -841,17 +841,17 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
-      description: "A Service You Can Trust",
+        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a Presión <br/> & Sellado de <br class="hidden sm:block"/> Adoquines</span> Expertos',
+      description: "Un Servicio en el que Puedes Confiar",
       buttons: [
         {
-          label: "Call Now",
+          label: "Llamar Ahora",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Get An Estimate Now",
+          label: "Obtener Presupuesto Ahora",
           href: "#",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
@@ -897,7 +897,7 @@ export default {
       ],
     },
     call: {
-      title: "CALL US",
+      title: "LLAMANOS",
       items: [
         {
           label: "407 -  844 - 8104",
@@ -907,34 +907,34 @@ export default {
       ],
     },
     nav: {
-      title: "QUICK LINKS",
+      title: "ENLACES RÁPIDOS",
       items: [
         {
-          label: "Home",
+          label: "Inicio",
           href: "/",
         },
         {
-          label: "Services",
+          label: "Servicios",
           href: "/services",
         },
         {
-          label: "Residential Services",
+          label: "Servicios Residenciales",
           href: "/residential",
         },
         {
-          label: "Commercial Services",
+          label: "Servicios Comerciales",
           href: "/commercial",
         },
         {
-          label: "Gallery",
+          label: "Galería",
           href: "/gallery",
         },
         {
-          label: "About Us",
+          label: "Sobre Nosotros",
           href: "/about",
         },
         {
-          label: "Contact Us",
+          label: "Contacto",
           href: "/contact",
         },
       ],

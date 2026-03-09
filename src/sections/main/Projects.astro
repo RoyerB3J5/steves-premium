@@ -12,13 +12,13 @@ const { content } = Astro.props as Props;
 ---
 <section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-20 md:gap-30 py-20 md:py-30">
   <div class="flex flex-col justify-center items-center gap-16 w-full">
-    <div class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
+    <div class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0 animation-down">
       <h2 set:html={content.title} class="text-primary font-title text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize "></h2>
       <Button text={content.button.label} href={content.button.href} extraBtnClass={content.button.bgColor} textClass={content.button.textColor}/>
     </div>
     <CarouselProjects content={content} />
   </div>
-  <div class="w-full flex flex-col justify-center items-center gap-6">
+  <div class="w-full flex flex-col justify-center items-center gap-6 animation-zoom">
     <div class="w-full flex justify-start items-center gap-4">
       <div class="h-13 w-13 rounded-full bg-[#F6F7F8] flex justify-center items-center">
         <img src="/images/user.svg" alt="Icono de Usuario" width="32" height="32" class="w-8 h-8">

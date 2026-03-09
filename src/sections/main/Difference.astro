@@ -14,16 +14,16 @@ const { content } = Astro.props as Props;
     <div class="w-full flex flex-col md:flex-row justify-between items-center gap-12 md:gap-10 lg:gap-20 ">
       <div class="w-full md:w-[58%] flex flex-col justify-center items-start gap-6 md:gap-10">
         <div class="w-full flex flex-col justify-center items-start gap-4">
-          <div class="py-1 px-3 flex justify-center items-center rounded-2xl bg-secondary/10">
+          <div class="py-1 px-3 flex justify-center items-center rounded-2xl bg-secondary/10 animation-right">
             <p class="text-primary text-[14px] font-semibold leading-[150%] uppercase text-center">{content.tag}</p>
           </div>
-          <h2 class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title" set:html={content.title}></h2>
+          <h2 class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title animation-right" set:html={content.title}></h2>
         </div>
-        <div class="flex flex-col justify-center items-start gap-4">
+        <div class="flex flex-col justify-center items-start gap-4 animation-right">
           <p class="text-primary text-[14px] font-bold leading-[150%] capitalize">{content.subtitle}</p>
           <p class="text-paragraph text-[14px] font-normal leading-[150%]">{content.description}</p>
         </div>
-        <div class="flex justify-center items-center gap-4.5 mt-6 md:mt-0 w-full md:w-auto">
+        <div class="flex justify-center items-center gap-4.5 mt-6 md:mt-0 w-full md:w-auto animation-right">
           {
             content.buttons.map((button)=>( 
               <Button text={button.label} href={button.href} extraBtnClass={button.buttonColor} textClass={button.textColor}/>
@@ -31,7 +31,7 @@ const { content } = Astro.props as Props;
           }
         </div>
       </div>
-      <div class="w-full md:w-[42%] bg-primary rounded-3xl flex flex-col justify-center items-start gap-6 md:gap-8 p-8 md:px-6 lg:px-10 md:py-10 lg:py-17">
+      <div class="w-full md:w-[42%] bg-primary rounded-3xl flex flex-col justify-center items-start gap-6 md:gap-8 p-8 md:px-6 lg:px-10 md:py-10 lg:py-17 animation-left">
         <div class="flex justify-start items-center gap-4">
           <p class="text-accent font-title text-[64px] md:text-[56px] lg:text-[72px] font-bold leading-[110%] tracking-[5px]">10+</p>
           <p set:html={content.info.title} class="text-white text-[24px] font-semibold leading-[120%] uppercase"></p>
@@ -49,7 +49,7 @@ const { content } = Astro.props as Props;
       </div>
     </div>
     <div class="flex flex-col justify-center items-center gap-8 w-full">
-      <div class="flex flex-col justify-center items-start gap-4 w-full">
+      <div class="flex flex-col justify-center items-start gap-4 w-full animation-down">
         <h3 class="text-primary text-[18px] md:text-[24px] font-bold leading-[150%] capitalize">{content.projects.title}</h3>
         <p class="text-paragraph text-[14px] font-normal leading-[150%]">{content.projects.description}</p>
       </div>

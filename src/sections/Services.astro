@@ -16,8 +16,8 @@ const lang = match ? match[1] : 'en';
 <section class="w-full flex justify-center items-center bg-secondary/5">
   <div class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 py-20 flex flex-col sm:flex-row justify-center items-center gap-6">
     {
-      content.map((item)=>( 
-        <a href={`/${lang}/services/${item.href}`} class="w-full sm:w-1/2 h-auto aspect-588/471 cursor-pointer hover:-translate-y-2 transition-all duration-300 ease-in-out">
+      content.map((item,index)=>( 
+        <a href={`/${lang}/services/${item.href}`} class={`w-full sm:w-1/2 h-auto aspect-588/471 cursor-pointer hover:-translate-y-2 transition-all duration-300 ease-in-out ${index == 0 ? 'animation-up' : 'animation-down'}`}>
           <div class="h-full flex flex-col justify-center items-start gap-4  rounded-3xl relative px-8 lg:px-15.5 overflow-hidden">
             <img src={`/images/${item.image}.webp`} alt={item.title} width="700" height="391" class="absolute w-full h-full -z-20 inset-0 object-cover object-center top-0 left-0">
             <div class="w-full h-full back-estimate absolute -z-10 top-0 left-0"></div>

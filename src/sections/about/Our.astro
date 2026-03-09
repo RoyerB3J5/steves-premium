@@ -7,18 +7,18 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 <section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 gap-12 sm:gap-16 flex flex-col justify-center items-center py-20 lg:py-30">
-  <div class="flex flex-col justify-center items-center gap-4">
+  <div class="flex flex-col justify-center items-center gap-4 animation-down">
       <h2 class="text-primary text-[32px] sm:text-[56px] font-medium leading-[110%] capitalize font-title text-center" set:html={content.title}></h2>
-      <div class="w-21.5 h-1.5 rounded-sm bg-secondary"></div>
+      <div class="w-21.5 h-1.5 rounded-sm animation-color-shift"></div>
   </div>
   <div class="w-full flex flex-col justify-center items-center gap-12">
-    <div class="w-full h-auto aspect-343/175 rounded-2xl sm:aspect-1300/552 sm:rounded-3xl relative overflow-hidden">
+    <div class="w-full h-auto aspect-343/175 rounded-2xl sm:aspect-1300/552 sm:rounded-3xl relative overflow-hidden animation-zoom">
       <img src="/images/professionals.webp" alt="Profesionales Steve's Premium" width="1300" height="552" class="w-full h-full absolute inset-0 object-cover object-center" decoding="async" loading="lazy"/>
     </div>
     <div class="flex flex-col sm:flex-row justify-between items-start gap-4 lg:gap-6 w-full">
       {
-        content.items.map((item)=>( 
-          <div class="w-full flex flex-col justify-center items-start gap-4 max-w-87.5">
+        content.items.map((item, index)=>( 
+          <div class="w-full flex flex-col justify-center items-start gap-4 max-w-87.5 animation-up" style={`animation-delay: ${index * 0.2}s`}>
             <h4 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h4>
             <p class="text-paragraph text-[14px] font-normal leading-[150%]">{item.description}</p>
           </div>

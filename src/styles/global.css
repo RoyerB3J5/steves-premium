@@ -76,6 +76,28 @@ html {
   }
 }
 
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeLeft {
   from {
     opacity: 0;
@@ -98,6 +120,17 @@ html {
   }
 }
 
+@keyframes flipDown {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
 .animation-zoom {
   opacity: 0;
 }
@@ -114,6 +147,22 @@ html {
   animation: fadeLeft 0.6s ease-in-out forwards;
 }
 
+.animation-down {
+  opacity: 0;
+}
+
+.animation-down.active {
+  animation: fadeDown 0.6s ease-in-out forwards;
+}
+
+.animation-up {
+  opacity: 0;
+}
+
+.animation-up.active {
+  animation: fadeUp 0.6s ease-in-out forwards;
+}
+
 .animation-right {
   opacity: 0;
 }
@@ -122,13 +171,42 @@ html {
   animation: fadeRight 0.6s ease-in-out forwards;
 }
 
+.animation-flip-down {
+  opacity: 0;
+}
+
+.animation-flip-down.active {
+  animation: flipDown 0.6s ease-in-out forwards;
+}
+
+@keyframes colorShiftRight {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animation-color-shift {
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary) 0%,
+    var(--color-secondary) 20%,
+    var(--color-primary) 40%,
+    var(--color-primary) 50%,
+    var(--color-primary) 60%,
+    var(--color-secondary) 80%,
+    var(--color-secondary) 100%
+  );
+  background-size: 200% 100%;
+  background-position: -200% center;
+  animation: colorShiftRight 5s linear infinite;
+}
+
 .back-estimate {
   background:
-    linear-gradient(
-      180deg,
-      rgba(0, 87, 255, 0.3) 0%,
-      rgba(0, 13, 38, 0.3) 100%
-    ),
+    linear-gradient(180deg, rgba(0, 87, 255, 0.3) 0%, rgba(0, 13, 38, 0.3) 100%),
     linear-gradient(0deg, rgba(0, 37, 108, 0.7) 0%, rgba(0, 37, 108, 0.7) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
   background-repeat: no-repeat;

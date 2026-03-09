@@ -36,10 +36,10 @@ const { content } = Astro.props as Props;
     >
       <h1
         set:html={content.title}
-        class="text-white text-[32px] sm:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title text-center sm:text-start"
+        class="text-white text-[32px] sm:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title text-center sm:text-start animation-right"
       />
-      <p class="text-white text-[16px] font-normal leading-[150%] text-center sm:text-start" set:html={content.description} />
-      <div class="flex justify-center items-center gap-4.5">
+      <p class="text-white text-[16px] font-normal leading-[150%] text-center sm:text-start animation-right" set:html={content.description} />
+      <div class="flex justify-center items-center gap-4.5 animate-bounce ">
         {
           content.buttons.map((button) => (
             <Button
@@ -51,8 +51,8 @@ const { content } = Astro.props as Props;
           ))
         }
       </div>
-      <div class="w-64.25 h-px bg-white"></div>
-      <div class="flex jutify-start itmes-center gap-14">
+      <div class="w-64.25 h-px bg-white animation-right"></div>
+      <div class="flex jutify-start itmes-center gap-14 animation-right">
         {
           content.stadistic.map((item) => (
             <div class="flex flex-col justify-center items-start gap-1">

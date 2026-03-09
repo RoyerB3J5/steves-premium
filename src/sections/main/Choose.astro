@@ -1,32 +1,55 @@
 ---
-type Translations = typeof import('../../i18n/en').default;
-type ChooseContent = Translations['main']['choose'];
+type Translations = typeof import("../../i18n/en").default;
+type ChooseContent = Translations["main"]["choose"];
 interface Props {
   content: ChooseContent;
 }
 const { content } = Astro.props as Props;
 ---
-<section class="w-full flex flex-col justify-center items-center gap-16 max-w-screen xl:max-w-7xl px-5 xl:px-0 py-20 lg:py-30">
-  <div class="flex flex-col justify-center items-center gap-4">
-    <h2 class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-center" set:html={content.title}></h2>
-    <div class="w-21.5 h-1.5 rounded-sm bg-secondary"></div>
+
+<section
+  class="w-full flex flex-col justify-center items-center gap-16 max-w-screen xl:max-w-7xl px-5 xl:px-0 py-20 lg:py-30"
+>
+  <div class="flex flex-col justify-center items-center gap-4 animation-down">
+    <h2
+      class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-center"
+      set:html={content.title}
+    />
+    <div class="w-21.5 h-1.5 rounded-sm animation-color-shift"></div>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-6">
     {
-      content.items.map((item)=>( 
-        <div class="w-full flex flex-col justify-center items-center overflow-hidden h-full">
-            <div class="w-full h-auto aspect-384/246 relative rounded-t-3xl overflow-hidden ">
-              <img src={`/images/${item.image}.webp`} alt={item.title} width="384" height="246" class="w-full h-full absolute inset-0 object-cover object-center"/>
+      content.items.map((item, index) => (
+        <div
+          class="w-full flex flex-col justify-center items-center overflow-hidden h-full animation-up "
+          style={`animation-delay: ${index * 0.2}s`}
+        >
+          <div class="w-full h-auto aspect-384/246 relative rounded-t-3xl overflow-hidden ">
+            <img
+              src={`/images/${item.image}.webp`}
+              alt={item.title}
+              width="384"
+              height="246"
+              class="w-full h-full absolute inset-0 object-cover object-center"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-start p-4 md:p-8 gap-6 bg-secondary/5 box-border border-b border-l border-r border-secondary/15 w-full rounded-b-3xl h-full flex-1">
+            <div class="w-10 h-10 flex justify-center items-center rounded-lg bg-secondary/10">
+              <img
+                src={`/images/${item.icon}.svg`}
+                alt={item.title}
+                width="21"
+                height="23"
+                class="w-5.25 h-auto"
+              />
             </div>
-            <div class="flex flex-col justify-center items-start p-4 md:p-8 gap-6 bg-secondary/5 box-border border-b border-l border-r border-secondary/15 w-full rounded-b-3xl h-full flex-1">
-              <div class="w-10 h-10 flex justify-center items-center rounded-lg bg-secondary/10">
-                <img src={`/images/${item.icon}.svg`} alt={item.title} width="21" height="23" class="w-5.25 h-auto"/>
-              </div>
-              <div class="flex flex-col justify-center items-start gap-2">
-                <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
-                <p class="text-paragraph text-[14px] leading-[150%] font-normal h-full">{item.description}</p>
-              </div>
+            <div class="flex flex-col justify-center items-start gap-2">
+              <h3 class="text-primary text-[14px] font-bold leading-[150%]">{item.title}</h3>
+              <p class="text-paragraph text-[14px] leading-[150%] font-normal h-full">
+                {item.description}
+              </p>
             </div>
+          </div>
         </div>
       ))
     }

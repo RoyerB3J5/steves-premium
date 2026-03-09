@@ -34,10 +34,10 @@ const { content } = Astro.props as Props;
     <div class="flex flex-col justify-center items-center sm:items-start gap-6 sm:gap-4 3xl:gap-8 translate-y-0 sm:translate-y-[8%]">
       <h1
         set:html={content.title}
-        class="text-white text-[32px] sm:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title text-center sm:text-start"
+        class="text-white text-[32px] sm:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title text-center sm:text-start animation-right"
       />
-      <div class="w-64.25 h-px bg-white"></div>
-      <div class="flex jutify-start itmes-center gap-14">
+      <div class="w-64.25 h-px bg-white animation-right"></div>
+      <div class="flex jutify-start itmes-center gap-14 animation-right">
         {
           content.stadistic.map((item) => (
             <div class="flex flex-col justify-center items-start gap-1">

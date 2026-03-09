@@ -120,12 +120,12 @@ export default {
             description: "Comprehensive commercial lot maintenance.",
           },
           {
-            image: "solution6",
+            image: "solution7",
             title: "Deck Washing",
             description: "Restore the natural beauty of your wood.",
           },
           {
-            image: "solution7",
+            image: "solution6",
             title: "Fence Washing",
             description: "Renew privacy fences and partitions",
           },
@@ -484,12 +484,12 @@ export default {
           description: "Comprehensive commercial lot maintenance.",
         },
         {
-          image: "solution6",
+          image: "solution7",
           title: "Deck Washing",
           description: "Restore the natural beauty of your wood.",
         },
         {
-          image: "solution7",
+          image: "solution6",
           title: "Fence Washing",
           description: "Renew privacy fences and partitions",
         },

@@ -249,7 +249,7 @@ const { lang, t } = Astro.props;
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     // Observer para animaciones: services-header, animation-left, hero-content
-    const animationElements = document.querySelectorAll('.services-header, .animation-left, .hero-content, .animation-zoom');
+    const animationElements = document.querySelectorAll('.animation-right, .animation-left, .animation-zoom, .animation-flip-down, .animation-up, .animation-down');
     
     const animationObserver = new IntersectionObserver(
       (entries) => {

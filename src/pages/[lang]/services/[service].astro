@@ -1,20 +1,17 @@
 ---
-import en from '../../../i18n/en';
-import es from '../../../i18n/es';
-import Layout from '../../../layouts/Layout.astro';
-import Hero from '../../../sections/Hero.astro';
-import Contact from '../../../sections/main/Contact.astro';
-import Estimate from '../../../sections/main/Estimate.astro';
-import type { Language } from '../../../types/language.type';
+import en from "../../../i18n/en";
+import es from "../../../i18n/es";
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../sections/Hero.astro";
+import Contact from "../../../sections/main/Contact.astro";
+import Estimate from "../../../sections/main/Estimate.astro";
+import type { Language } from "../../../types/language.type";
 
-type ServiceData = typeof en.services[keyof typeof en.services];
+type ServiceData = (typeof en.services)[keyof typeof en.services];
 
 export function getStaticPaths() {
-  const services = [
-    'residential',
-    'commercial',
-  ];
-  const languages = ['es', 'en'];
+  const services = ["residential", "commercial"];
+  const languages = ["es", "en"];
 
   return languages.flatMap((lang) =>
     services.map((service) => ({
@@ -23,30 +20,53 @@ export function getStaticPaths() {
   );
 }
 
-export const defaultRedirect = '/en';
+export const defaultRedirect = "/en";
 
 const { lang, service } = Astro.params as { lang: Language; service: string };
 const translations = { es, en };
 const t = translations[lang];
 const serviceData = (t.services as Record<string, ServiceData>)[service] ?? ({} as ServiceData);
 ---
+
 <Layout lang={lang} t={t}>
   <Hero content={serviceData.hero} />
-  <section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-12 md:gap-16 pt-20 pb-10 sm:pb-15">
-    <div class="flex flex-col justify-center items-center gap-4">
-      <h2 class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-center" set:html={serviceData.services.title}></h2>
-      <div class="w-21.5 h-1.5 rounded-sm bg-secondary"></div>
+  <section
+    class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col justify-center items-center gap-12 md:gap-16 pt-20 pb-10 sm:pb-15"
+  >
+    <div class="flex flex-col justify-center items-center gap-4 animation-down">
+      <h2
+        class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-center"
+        set:html={serviceData.services.title}
+      />
+      <div class="w-21.5 h-1.5 rounded-sm animation-color-shift"></div>
     </div>
-    <div class={`w-full grid ${service == 'residential' ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2'} justify-center items-center gap-6`}>
+    <div
+      class={`w-full grid ${service == "residential" ? "grid-cols-2 sm:grid-cols-3" : "grid-cols-2"} justify-center items-center gap-6`}
+    >
       {
-        serviceData.services.items.map((item)=>( 
-          <div class="w-full flex flex-col justify-center items-center overflow-hidden h-full">
-            <div class={`w-full h-auto ${service == 'residential' ? 'aspect-384/246' : 'aspect-163/104 md:aspect-588/246' }  relative rounded-t-3xl overflow-hidden`}>
-              <img src={`/images/${item.image}.webp`} alt={item.title} width="282" height="180" class={`w-full h-full absolute inset-0 object-cover ${item.image == 'solution-5' ? 'object-center' : 'object-[50%_20%]'} `}/>
+        serviceData.services.items.map((item, index) => (
+          <div
+            class="w-full flex flex-col justify-center items-center overflow-hidden h-full animation-up"
+            style={`animation-delay: ${index * 0.2}s`}
+          >
+            <div
+              class={`w-full h-auto ${service == "residential" ? "aspect-384/246" : "aspect-163/104 md:aspect-588/246"}  relative rounded-t-3xl overflow-hidden`}
+            >
+              <img
+                src={`/images/${item.image}.webp`}
+                alt={item.title}
+                width="282"
+                height="180"
+                class={`w-full h-full absolute inset-0 object-cover ${item.image == "solution-5" ? "object-center" : "object-[50%_20%]"} `}
+              />
             </div>
             <div class="flex flex-col justify-center items-center sm:items-start px-4 py-6 sm:p-8 gap-2 bg-secondary/5 box-border border-b border-l border-r border-secondary/15 w-full rounded-b-3xl flex-1">
-              <h3 class="text-primary text-[14px] font-bold leading-[150%] text-center sm:text-start">{item.title}</h3>
-              <p class="text-paragraph text-[14px] leading-[150%] font-normal hidden sm:block">{item.description}</p>
+              <h3 class="text-primary text-[14px] font-bold leading-[150%] text-center sm:text-start">
+                {item.title}
+              </h3>
+              <p class="text-paragraph text-[14px] leading-[150%] font-normal hidden sm:block">
+                {item.description}
+              </p>
             </div>
           </div>
         ))
@@ -54,5 +74,5 @@ const serviceData = (t.services as Record<string, ServiceData>)[service] ?? ({} 
     </div>
   </section>
   <Contact content={serviceData.contact} />
-  <Estimate content={serviceData.estimate}/>
+  <Estimate content={serviceData.estimate} />
 </Layout>
