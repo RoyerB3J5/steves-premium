@@ -30,7 +30,7 @@ const uniqueId = Math.random().toString(36).substr(2, 9);
 
 <div
   id={`ba-container-${uniqueId}`}
-  class={`relative mx-auto overflow-hidden select-none rounded-3xl w-full h-auto aspect-1200/556 `}
+  class={`relative mx-auto overflow-hidden select-none rounded-3xl w-full h-auto aspect-343/288 md:aspect-1200/556 `}
 
 >
   <div id={`ba-labels-${uniqueId}`} class="absolute z-5 bg-black/20 w-full h-full flex justify-between items-end px-6 py-6 opacity-0 transition-opacity duration-300 pointer-events-none">
@@ -45,7 +45,7 @@ const uniqueId = Math.random().toString(36).substr(2, 9);
   <img
     src={beforeImage}
     alt={altBefore}
-    class={`absolute top-0 left-0 w-full h-auto `}
+    class={`absolute top-0 left-0 w-full h-full md:h-auto `}
     loading="lazy"
     decoding="async"
     width="1200"
@@ -56,7 +56,7 @@ const uniqueId = Math.random().toString(36).substr(2, 9);
   <img
     src={afterImage}
     alt={altAfter}
-    class={`absolute top-0 left-0 w-full h-auto `}
+    class={`absolute top-0 left-0 w-full h-full md:h-auto `}
     style={` clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);`}
     loading="lazy"
     decoding="async"

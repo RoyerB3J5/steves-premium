@@ -62,7 +62,7 @@ export default {
       section1: {
         tag: "orldando‘s premier exterior cleaning",
         title:
-          'Complete Residential &  <span class="text-secondary text-[56px] font-medium leading-[110%] capitalize font-title">Commercial</span> Pressure Washing Services',
+          'Complete Residential &  <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Commercial</span> Pressure Washing Services',
         items: [
           {
             icons: "calendar",
@@ -147,13 +147,13 @@ export default {
         {
           label: "Call Now",
           href: "tel:+14078448104",
-          buttonColor: "bg-primary",
+          buttonColor: "bg-primary w-[35%] md:w-auto",
           textColor: "text-white",
         },
         {
           label: "Get An Estimate Now",
           href: "#",
-          buttonColor: "bg-accent",
+          buttonColor: "bg-accent w-[75%] md:w-auto",
           textColor: "text-primary",
         },
       ],
@@ -244,13 +244,13 @@ export default {
     },
     share: {
       title:
-        'Share Quality. <br/> <span class="text-accent text-[56px] font-title font-medium leading-[110%] capitalize">Build Trust.</span>',
+        'Share Quality. <br class="hidden md:block"/> <span class="text-accent text-[32px] sm:text-[48px] lg:text-[56px] font-title font-medium leading-[110%] capitalize">Build Trust.</span>',
       description:
         "If you’ve worked with Steve's Premium Pressure Washing, you know the spotless results we deliver. Many of our new clients come from referrals because a clean, revitalized property speaks for itself. <br/> <br/> If you know a neighbor, friend, or business in Orlando and surrounding areas who needs expert pressure washing or paver sealing, send them our way. We’d love to help!",
       button: {
         label: "Click Here to Refer a Neighbor",
         href: "#",
-        bgColor: "bg-accent",
+        bgColor: "bg-accent py-4 md:py-3 ",
         textColor: "text-primary",
         icon: "arrow",
       },
@@ -288,7 +288,7 @@ export default {
       },
       advice: {
         title:
-          "Need <span class='text-secondary text-[56px] font-medium leading-[110%] capitalize font-title'> Expert Advice?</span>",
+          "Need <span class='text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title'> Expert Advice?</span>",
         description:
           "We don't believe in cookie cutter pricing. Every home and business is different. That’s why we provide personalized service; just provide us with basic information, and our team will tailor our services to meet your exact requirements. <br/> <br/> Get a transparent estimate so you know exactly what to expect with zero hidden costs.",
         button: {
@@ -303,7 +303,7 @@ export default {
     contact: {
       tag: "Fast & Easy Process",
       title:
-        'Tell Us About <br/> <span class="text-secondary text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
+        'Tell Us About <br class="hidden sm:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Your Project</span>',
       description:
         "Share a few details, and you're on your way to a cleaner property. Fill out our form for a hassle free, no obligation pressure washing quote. If you can, upload a photo of the area so we can provide expert advice and recommendations right away.",
     },
@@ -338,7 +338,7 @@ export default {
     },
     projects: {
       title:
-        'Check out our recent <br/> <span class="text-secondary font-title text-[56px] font-medium leading-[110%] capitalize">completed Projects</span>',
+        'Check out our recent <br/> <span class="text-secondary font-title text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize">completed Projects</span>',
       button: {
         label: "View All Projects",
         href: "#",
@@ -411,9 +411,9 @@ export default {
       img: "services-hero",
       imagePhone: "services-hero-sm",
       title:
-        "Our Professional <br/> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br/> Services </span>",
+        "Our Professional <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br class='hidden sm:block'/> Services </span>",
       description:
-        "From cozy homes to large commercial complexes, Steve’s <br/> Premium Pressure Washing delivers spotless results across <br/> Orlando.",
+        "From cozy homes to large commercial complexes, Steve’s <br class='hidden sm:block'/> Premium Pressure Washing delivers spotless results across <br class='hidden sm:block'/> Orlando.",
       buttons: [
         {
           label: "Call Now",
