@@ -28,11 +28,11 @@ const icons = [
   },
   {
     icon: 'facebook',
-    href: '#',
+    href: 'https://www.facebook.com/p/Steves-Premium-Pressure-Washing-100083189356054/',
   },
   {
     icon: 'instagram',
-    href: '#',
+    href: 'https://www.instagram.com/p/C7Vz_e1Mqwl/?hl=en',
   }
 ];
 ---
@@ -46,9 +46,9 @@ const icons = [
         <div class="flex justify-center items-center gap-4">
           {
             icons.map(item => ( 
-              <div class="bg-secondary h-7.75 w-7.75 rounded-full hover:bg-primary group flex justify-center items-center transition-colors duration-300">
+              <a href={item.href} class="bg-secondary h-7.75 w-7.75 rounded-full hover:bg-primary group flex justify-center items-center transition-colors duration-300 cursor-pointer">
                 <img src={`/images/${item.icon}.svg`} alt="Icono de redes" class='w-4.5 h-4.5 text-white'>
-              </div>
+              </a>
             ))
           }
         </div>

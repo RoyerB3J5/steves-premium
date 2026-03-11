@@ -1,25 +1,44 @@
 ---
-type Translations = typeof import('../../i18n/en').default;
-type ContactContent = Translations['main']['contact'];
+import Form from "../../components/Form.astro";
+
+type Translations = typeof import("../../i18n/en").default;
+type ContactContent = Translations["main"]["contact"];
 interface Props {
   content: ContactContent;
 }
 const { content } = Astro.props as Props;
 ---
-<section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col md:flex-row justify-center items-center gap-6 pt-10 md:pt-15 pb-20 md:pb-30">
+
+<section
+  class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex flex-col md:flex-row justify-center items-center md:items-start gap-6 pt-10 md:pt-15 pb-20 md:pb-30"
+  id="contact"
+>
   <div class="flex flex-col justify-center items-center gap-10 w-full md:w-1/2">
     <div class="flex flex-col justify-center items-start gap-4">
-      <div class="py-1 px-3 flex justify-center items-center rounded-2xl bg-secondary/10 animation-right">
-        <p class="text-primary text-[14px] font-semibold leading-[150%] uppercase text-center">{content.tag}</p>
+      <div
+        class="py-1 px-3 flex justify-center items-center rounded-2xl bg-secondary/10 animation-right"
+      >
+        <p class="text-primary text-[14px] font-semibold leading-[150%] uppercase text-center">
+          {content.tag}
+        </p>
       </div>
-      <h2 set:html={content.title} class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-start animation-right"></h2>
-      <p class="text-paragraph text-[14px] font-normal leading-[150%] text-start animation-right">{content.description}</p>
+      <h2
+        set:html={content.title}
+        class="text-primary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title text-start animation-right"
+      />
+      <p class="text-paragraph text-[14px] font-normal leading-[150%] text-start animation-right">
+        {content.description}
+      </p>
     </div>
-    <div class="rounded-3xl relative overflow-hidden aspect-588/716 w-full h-auto animation-right">
-      <img src="/images/form.webp" alt="Imagen de formulario" width="419" height="750" class="absolute object-cover object-top inset-0 w-full h-full">
+    <div class="rounded-3xl relative overflow-hidden aspect-588/600 w-full h-auto animation-right">
+      <img
+        src="/images/form.webp"
+        alt="Imagen de formulario"
+        width="419"
+        height="750"
+        class="absolute object-cover object-top inset-0 w-full h-full"
+      />
     </div>
   </div>
-  <div class="w-full md:w-1/2 h-full bg-secondary rounded-3xl animation-left">
-
-  </div>
+  <Form />
 </section>

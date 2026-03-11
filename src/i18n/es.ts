@@ -30,8 +30,8 @@ export default {
     ],
     buttons: [
       {
-        label: "Obtener Presupuesto",
-        href: "#",
+        label: "Presupuesto",
+        href: "#contact",
       },
     ],
   },
@@ -39,18 +39,18 @@ export default {
     hero: {
       video: "",
       title:
-        'Expertos en <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a Presión /> & Sellado de <br class="hidden sm:block"/> Adoquines</span> Premium',
-      description: "Un Servicio en el que Puedes Confiar",
+        'Expertos <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a <br class="hidden sm:block lg:hidden"/> Presión <br class="hidden lg:block"/> & Sellado de <br class="hidden sm:block lg:hidden"/> Adoquines</span> Premium',
+      description: "Servicio en que Puedes Confiar",
       buttons: [
         {
-          label: "Llamar Ahora",
+          label: "Llamar",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Obtener Presupuesto Ahora",
-          href: "#",
+          label: "Obtener Presupuesto",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -131,7 +131,7 @@ export default {
           },
           {
             image: "solution8",
-            title: "Limpieza de Canaletas",
+            title: "Limpieza Canaletas",
             description: "Mantenimiento esencial para el flujo de agua.",
           },
         ],
@@ -146,15 +146,15 @@ export default {
         "Transformamos superficies exteriores sucias, manchadas y desgastadas en espacios limpios, vibrantes y acogedores. Como un negocio familiar local orgulloso, nuestro equipo proporciona consultoría experta y servicios personalizados para cumplir con tus requisitos específicos. Estamos comprometidos a entregar un servicio de primera calidad y una experiencia impecable, sin romper el banco.",
       buttons: [
         {
-          label: "Llamar Ahora",
+          label: "Llamar Ya",
           href: "tel:+14078448104",
-          buttonColor: "bg-primary",
+          buttonColor: "bg-primary w-[36%] md:w-auto",
           textColor: "text-white",
         },
         {
-          label: "Obtener Presupuesto Ahora",
-          href: "#",
-          buttonColor: "bg-accent",
+          label: "Obtener Presupuesto",
+          href: "#contact",
+          buttonColor: "bg-accent w-[64%] md:w-auto",
           textColor: "text-primary",
         },
       ],
@@ -207,41 +207,85 @@ export default {
       ],
     },
     review: {
-      title: "the trust of our community",
+      title: "confianza de nuestra comunidad",
       items: [
         {
           content:
-            "Steve takes great care in his work. Goes above and beyond without being asked. Wendy fielded a ton of questions without any hesitation. Both of them walk you through a job as if you were family. Will definitely call them back when we need them. Thanks to both for taking care of our pressuring washing on short notice!!",
+            "Steve cuida mucho su trabajo. Va más allá de lo esperado sin ser solicitado. Wendy respondió muchísimas preguntas sin ninguna duda. Ambos te guían trabajando como si fueras familia. Definitivamente los llamaremos cuando los necesitemos. ¡Gracias a ambos por cuidar nuestro lavado a presión con poco tiempo de aviso!",
           name: "Britt",
-          time: "A month ago",
+          time: "Hace un mes",
           back: "bg-[#E33E7A]",
+          icon: "google",
         },
         {
           content:
-            "Steve and Wendy provided excellent service w for our house cleaning. He removed some really rough rust stains. Great company!",
+            "Contratar a Steve's Premium Pressure Washing para lavar a presión, lijar y sellar mis adoquines de entrada fue impresionante. Steve tomó tiempo extra y atención al detalle, y el resultado final fue absolutamente hermoso. Quedé muy satisfecho con la calidad del trabajo y la profesionalidad. ¡Los recomiendo altamente!",
+          name: "Roma Khan",
+          time: "9 Dic",
+          back: "bg-[#FBBC05]",
+          icon: "nextdoor",
+        },
+        {
+          content:
+            "Steve y Wendy proporcionaron excelente servicio para la limpieza de nuestra casa. Removió algunas manchas de óxido muy difíciles. ¡Excelente empresa!",
           name: "Chris Rosado",
-          time: "4 months ago",
+          time: "Hace 4 meses",
           back: "bg-[#2F89D4]",
+          icon: "google",
         },
         {
           content:
-            "I have Steve yesterday and today and he did a great job! He soft washed the entire house and cleaned all the windows. He also cleaned and sealed my patio and driveway pavers, they look super beautiful just like brand new installed! I highly recommend Steve and his company!",
+            "Steve cuida mucho su trabajo. Va siempre más allá sin ser solicitado. Wendy respondió muchísimas preguntas sin ninguna duda. Ambos te guían trabajando como si fueras familia. Definitivamente los llamaremos cuando los necesitemos. ¡Gracias a ambos por cuidar nuestro lavado a presión con poco tiempo de aviso!",
+          name: "Britt K.",
+          time: "25 Ene",
+          back: "bg-[#435260]",
+          icon: "nextdoor",
+        },
+        {
+          content:
+            "Tuve a Steve ayer y hoy e hizo un excelente trabajo. Lavó suavemente toda la casa y limpió todas las ventanas. También limpió y selló mis adoquines de patio y entrada, ¡lucen hermosísimos como recién instalados! ¡Recomiendo altamente a Steve y su empresa!",
           name: "Victoria Perlaza",
-          time: "5 months ago",
+          time: "Hace 5 meses",
           back: "bg-[#7B909D]",
+          icon: "google",
         },
         {
           content:
-            "Steve stripped and resealed my pavers after we extended our driveway. He did a great job and was very professional. Lots of neighbors have also used his paver sealing services and had great results.",
+            "Steve Pressure Washing hizo un excelente trabajo. Los contrató para sellar mi entrada y acceso. Quedé impresionado con el resultado porque tuvieron que quitar el sello viejo de un trabajo anterior mal hecho. Los adoquines lucen como nuevos. La atención al detalle fue asombrosa y muy puntual. La disponibilidad para responder preguntas también fue un plus. Los recomiendo altamente.",
+          name: "Maria Valle",
+          time: "17 Dic",
+          back: "bg-[#EC27F6]",
+          icon: "nextdoor",
+        },
+        {
+          content:
+            "Steve removió y reselló mis adoquines después de extender nuestra entrada. Hizo un excelente trabajo y fue muy profesional. Muchos vecinos también han utilizado sus servicios de sellado de adoquines y tuvieron excelentes resultados.",
           name: "Fabiana Diaz",
-          time: "5 months ago",
+          time: "Hace 5 meses",
           back: "bg-[#7720A4]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve, Wendy y su equipo se ganaron una calificación de cinco estrellas completa por completar exitosamente el lavado a presión y sellado de nuestros adoquines de entrada y porche; y la limpieza a presión del exterior de nuestra casa. Destacaron en servicio al cliente, atención al detalle, uso de productos de alta calidad y ejecución impecable. Trabajo realizado muy bien.",
+          name: "Tom Place",
+          time: "23 Oct",
+          back: "bg-[#0DA128]",
+          icon: "nextdoor",
         },
       ],
-      button: {
-        label: "VER TODAS LAS RESEÑAS EN GOOGLE",
-        href: "#",
-      },
+      button: [
+        {
+          label: "RESEÑAS EN GOOGLE",
+          href: "https://share.google/omZSIQdYfU5n9YwKD",
+          back: "bg-[#EB4335]",
+        },
+        {
+          label: "RESEÑAS EN NEXTDOOR",
+          href: "https://nextdoor.com/pages/steve-farah-orlando-fl-1/",
+          back: "bg-[#1B8751]",
+        },
+      ],
     },
     share: {
       title:
@@ -249,7 +293,7 @@ export default {
       description:
         "Si has trabajado con Steve's Premium Pressure Washing, ya conoces los resultados impecables que ofrecemos. Muchos de nuestros nuevos clientes vienen de referencias porque una propiedad limpia y revitalizada habla por sí sola. <br/> <br/> Si conoces un vecino, amigo o negocio en Orlando y áreas circundantes que necesite lavado a presión experto o sellado de adoquines, envíanoslos. ¡Nos encantaría ayudar!",
       button: {
-        label: "Haz Clic Aquí para Referir un Vecino",
+        label: "Referir un Vecino",
         href: "#",
         bgColor: "bg-accent py-4 md:py-3 ",
         textColor: "text-primary",
@@ -257,7 +301,7 @@ export default {
       },
       content: {
         title: "PREMIUM",
-        description: "Una propiedad limpia y revitalizada habla por sí sola.",
+        description: "Una propiedad limpia y <br/> revitalizada habla por sí sola.",
       },
     },
     information: {
@@ -293,8 +337,8 @@ export default {
         description:
           "No creemos en precios estándar. Cada hogar y negocio es diferente. Por eso ofrecemos servicio personalizado; solo proporciona información básica, y nuestro equipo adaptará nuestros servicios a tus requisitos exactos.<br/> <br/> Obtén un presupuesto transparente para que sepas exactamente qué esperar sin costos ocultos.",
         button: {
-          label: "OBTENER TU PRESUPUESTO GRATIS",
-          href: "#",
+          label: "OBTENER PRESUPUESTO",
+          href: "#contact",
           bgColor: "bg-accent",
           textColor: "text-primary",
           icon: "arrow",
@@ -304,7 +348,7 @@ export default {
     contact: {
       tag: "Proceso Rápido y Fácil",
       title:
-        'Cuéntanos Acerca de <br class="hidden sm:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
+        'Cuéntanos Acerca de <br class="hidden lg:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
       description:
         "Comparte algunos detalles y estás en camino a una propiedad más limpia. Completa nuestro formulario para un presupuesto de lavado a presión sin complicaciones y sin obligación. Si puedes, carga una foto del área para que podamos proporcionar asesoramiento experto y recomendaciones de inmediato.",
     },
@@ -314,8 +358,8 @@ export default {
       description:
         "En Steve's Premium Pressure Washing, transformamos superficies sucias y desgastadas en espacios limpios y acogedores. Permite que traigamos servicio de primera calidad, equipos profesionales y una experiencia impecable a tu hogar o negocio.",
       button: {
-        label: "OBTENER UN PRESUPUESTO GRATIS",
-        href: "#",
+        label: "OBTENER PRESUPUESTO",
+        href: "#contact",
         bgColor: "bg-accent",
         textColor: "text-primary",
         icon: "arrow",
@@ -339,7 +383,7 @@ export default {
     },
     projects: {
       title:
-        'Echa un vistazo a nuestros recientes <br/> <span class="text-secondary font-title text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize">Proyectos Completados</span>',
+        'Mira nuestros recientes <br/> <span class="text-secondary font-title text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize">Proyectos Completados</span>',
       button: {
         label: "Ver Todos los Proyectos",
         href: "#",
@@ -349,34 +393,24 @@ export default {
       },
       items: [
         {
-          title: "Estación de Adoquines",
-          place: "Winter Park, FL",
+          title: "Sellado de entrada",
+          place: "Laureate Park, Lake Nona",
           image: "project1",
         },
         {
-          title: "Lavado Exterior Completo",
-          place: "Lake Nola, FL",
+          title: "Sellado y teñido",
+          place: "Conway",
           image: "project2",
         },
         {
-          title: "Limpieza Premium de Entrada",
-          place: "Windermere, FL",
+          title: "Removido y sellado de área de piscina",
+          place: "East Lake Park, St Cloud",
           image: "project3",
         },
         {
-          title: "Estación de Adoquines",
-          place: "Winter Park, FL",
-          image: "project1",
-        },
-        {
-          title: "Lavado Exterior Completo",
-          place: "Lake Nola, FL",
-          image: "project2",
-        },
-        {
-          title: "Limpieza Premium de Entrada",
-          place: "Windermere, FL",
-          image: "project3",
+          title: "Removido y sellado de piscina",
+          place: "Eagle Creek, Lake Nona",
+          image: "project4",
         },
       ],
       mediaDescription: "Síguenos Para Transformaciones Impecables",
@@ -395,7 +429,7 @@ export default {
           description: "Por nuestros clientes",
         },
         {
-          number: "Top Notch",
+          number: "De Primera",
           title: "equipos",
           description: "& técnicas",
         },
@@ -412,19 +446,19 @@ export default {
       img: "services-hero",
       imagePhone: "services-hero-sm",
       title:
-        "Nuestros Servicios <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Profesionales de <br class='hidden sm:block'/> Limpieza </span>",
+        "Nuestros Servicios <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Profesionales de Limpieza </span>",
       description:
         "Desde hogares acogedores hasta grandes complejos comerciales, Steve's <br class='hidden sm:block'/> Premium Pressure Washing entrega resultados impecables en toda <br class='hidden sm:block'/> Orlando.",
       buttons: [
         {
-          label: "Llamar Ahora",
+          label: "Llamar Ya",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Obtener Presupuesto Ahora",
-          href: "#",
+          label: "Obtener Presupuesto ",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -509,19 +543,19 @@ export default {
         img: "residential-hero",
         imagePhone: "residential-hero-sm",
         title:
-          "Profesional <br/> <span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Restauración <br/> de Hogar </span> en <br/> Orlando",
+          "Profesional <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[64px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Restauración <br/> de Hogar </span> en Orlando",
         description:
           "El lavado a presión mantiene tu hogar limpio y protegido, <br/> eliminando suciedad de techos, revestimientos y superficies exteriores.",
         buttons: [
           {
-            label: "Llamar Ahora",
+            label: "Llamar Ya",
             href: "tel:+14078448104",
             buttonColor: "bg-accent",
             textColor: "text-primary",
           },
           {
-            label: "Obtener Presupuesto Ahora",
-            href: "#",
+            label: "Obtener Presupuesto",
+            href: "#contact",
             buttonColor: "border-[1.5px] border-white",
             textColor: "text-white",
           },
@@ -580,7 +614,7 @@ export default {
       contact: {
         tag: "Proceso Rápido y Fácil",
         title:
-          'Cuéntanos Acerca de <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
+          'Cuéntanos Acerca de <br class="hidden lg:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
         description:
           "Comparte algunos detalles y estás en camino a una propiedad más limpia. Completa nuestro formulario para un presupuesto de lavado sin complicaciones y sin obligación. Si puedes, carga una foto del área para que podamos proporcionar asesoramiento experto de inmediato.",
       },
@@ -590,8 +624,8 @@ export default {
         description:
           "En Steve's Premium Pressure Washing, transformamos superficies sucias y desgastadas en espacios limpios y acogedores. Permite que traigamos servicio de primera calidad, equipos profesionales y una experiencia impecable a tu hogar o negocio.",
         button: {
-          label: "OBTENER UN PRESUPUESTO GRATIS",
-          href: "#",
+          label: "OBTENER PRESUPUESTO ",
+          href: "#contact",
           bgColor: "bg-accent",
           textColor: "text-primary",
           icon: "arrow",
@@ -603,19 +637,19 @@ export default {
         img: "commercial-hero",
         imagePhone: "commercial-hero-sm",
         title:
-          "<span class='text-secondary text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Comercial <br/> Comercial </span> Para <br/> Excelencia <br/> Empresarial",
+          "<span class='text-secondary text-[32px] sm:text-[54px] lg:text-[64px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Comercial Comercial <br/> </span> Para Excelencia Empresarial",
         description:
           "Un exterior limpio hace una excelente primera impresión. Nuestro lavado <br/> comercial mejora la seguridad y <br/> apariencia de tu negocio.",
         buttons: [
           {
-            label: "Llamar Ahora",
+            label: "Llamar Ya",
             href: "tel:+14078448104",
             buttonColor: "bg-accent",
             textColor: "text-primary",
           },
           {
-            label: "Obtener Presupuesto Ahora",
-            href: "#",
+            label: "Obtener Presupuesto",
+            href: "#contact",
             buttonColor: "border-[1.5px] border-white",
             textColor: "text-white",
           },
@@ -651,7 +685,7 @@ export default {
       contact: {
         tag: "Proceso Rápido y Fácil",
         title:
-          'Cuéntanos Acerca de <br/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
+          'Cuéntanos Acerca de <br class="hidden lg:block"/> <span class="text-secondary text-[32px] sm:text-[48px] lg:text-[56px] font-medium leading-[110%] capitalize font-title">Tu Proyecto</span>',
         description:
           "Comparte algunos detalles y estás en camino a una propiedad más limpia. Completa nuestro formulario para un presupuesto de lavado a presión sin complicaciones y sin obligación. Si puedes, carga una foto del área para que podamos proporcionar asesoramiento experto y recomendaciones de inmediato.",
       },
@@ -661,8 +695,8 @@ export default {
         description:
           "En Steve's Premium Pressure Washing, transformamos superficies sucias y desgastadas en espacios limpios y acogedores. Permite que traigamos servicio de primera calidad, equipos profesionales y una experiencia impecable a tu hogar o negocio.",
         button: {
-          label: "OBTENER UN PRESUPUESTO GRATIS",
-          href: "#",
+          label: "OBTENER PRESUPUESTO",
+          href: "#contact",
           bgColor: "bg-accent",
           textColor: "text-primary",
           icon: "arrow",
@@ -674,18 +708,18 @@ export default {
     hero: {
       video: "",
       title:
-        'Expertos en <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a Presión <br/> & Sellado de Adoquines</span>',
+        'Expertos en <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado <br class="hidden sm:block lg:hidden"/> a Presión <br class="block sm:hidden lg:block"/> & Sellado <br class="hidden sm:block lg:hidden"/> de Adoquines</span>',
       description: "Un Servicio en el que Puedes Confiar",
       buttons: [
         {
-          label: "Llamar Ahora",
+          label: "Llamar Ya",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Obtener Presupuesto Ahora",
-          href: "#",
+          label: "Obtener Presupuesto",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -715,46 +749,91 @@ export default {
       ],
     },
     review: {
-      title: "la confianza de nuestra comunidad",
+      title: "confianza de nuestra comunidad",
       items: [
         {
           content:
-            "Steve tiene mucho cuidado en su trabajo. Va más allá de lo solicitado. Wendy respondió un montón de preguntas sin ninguna duda. Ambos te guían a través del trabajo como si fueras familia. Definitivamente los llamaremos cuando los necesitemos. ¡Gracias a ambos por cuidar nuestro lavado a presión con poco tiempo de aviso!!",
+            "Steve cuida mucho su trabajo. Va más allá de lo esperado sin ser solicitado. Wendy respondió muchísimas preguntas sin ninguna duda. Ambos te guían trabajando como si fueras familia. Definitivamente los llamaremos cuando los necesitemos. ¡Gracias a ambos por cuidar nuestro lavado a presión con poco tiempo de aviso!",
           name: "Britt",
           time: "Hace un mes",
           back: "bg-[#E33E7A]",
+          icon: "google",
         },
         {
           content:
-            "Steve y Wendy proporcionaron un excelente servicio para la limpieza de nuestra casa. ¡Removió manchas de óxido muy difíciles. Excelente empresa!",
+            "Contratar a Steve's Premium Pressure Washing para lavar a presión, lijar y sellar mis adoquines de entrada fue impresionante. Steve tomó tiempo extra y atención al detalle, y el resultado final fue absolutamente hermoso. Quedé muy satisfecho con la calidad del trabajo y la profesionalidad. ¡Los recomiendo altamente!",
+          name: "Roma Khan",
+          time: "9 Dic",
+          back: "bg-[#FBBC05]",
+          icon: "nextdoor",
+        },
+        {
+          content:
+            "Steve y Wendy proporcionaron excelente servicio para la limpieza de nuestra casa. Removió algunas manchas de óxido muy difíciles. ¡Excelente empresa!",
           name: "Chris Rosado",
           time: "Hace 4 meses",
           back: "bg-[#2F89D4]",
+          icon: "google",
         },
         {
           content:
-            "¡Tuve a Steve ayer y hoy e hizo un trabajo excelente! Lavó suavemente toda la casa y limpió todas las ventanas. ¡También limpió y selló mis adoquines de patio y entrada, se ven hermoso como recién instalados! ¡Recomiendo altamente a Steve y su empresa!",
+            "Steve cuida mucho su trabajo. Va siempre más allá sin ser solicitado. Wendy respondió muchísimas preguntas sin ninguna duda. Ambos te guían trabajando como si fueras familia. Definitivamente los llamaremos cuando los necesitemos. ¡Gracias a ambos por cuidar nuestro lavado a presión con poco tiempo de aviso!",
+          name: "Britt K.",
+          time: "25 Ene",
+          back: "bg-[#435260]",
+          icon: "nextdoor",
+        },
+        {
+          content:
+            "Tuve a Steve ayer y hoy e hizo un excelente trabajo. Lavó suavemente toda la casa y limpió todas las ventanas. También limpió y selló mis adoquines de patio y entrada, ¡lucen hermosísimos como recién instalados! ¡Recomiendo altamente a Steve y su empresa!",
           name: "Victoria Perlaza",
           time: "Hace 5 meses",
           back: "bg-[#7B909D]",
+          icon: "google",
         },
         {
           content:
-            "Steve removió y reselló mis adoquines después de extender nuestra entrada. ¡Hizo un trabajo excelente y fue muy profesional. Muchos vecinos también han usado sus servicios de sellado de adoquines y tuvieron excelentes resultados.",
+            "Steve Pressure Washing hizo un excelente trabajo. Los contrató para sellar mi entrada y acceso. Quedé impresionado con el resultado porque tuvieron que quitar el sello viejo de un trabajo anterior mal hecho. Los adoquines lucen como nuevos. La atención al detalle fue asombrosa y muy puntual. La disponibilidad para responder preguntas también fue un plus. Los recomiendo altamente.",
+          name: "Maria Valle",
+          time: "17 Dic",
+          back: "bg-[#EC27F6]",
+          icon: "nextdoor",
+        },
+        {
+          content:
+            "Steve removió y reselló mis adoquines después de extender nuestra entrada. Hizo un excelente trabajo y fue muy profesional. Muchos vecinos también han utilizado sus servicios de sellado de adoquines y tuvieron excelentes resultados.",
           name: "Fabiana Diaz",
           time: "Hace 5 meses",
           back: "bg-[#7720A4]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve, Wendy y su equipo se ganaron una calificación de cinco estrellas completa por completar exitosamente el lavado a presión y sellado de nuestros adoquines de entrada y porche; y la limpieza a presión del exterior de nuestra casa. Destacaron en servicio al cliente, atención al detalle, uso de productos de alta calidad y ejecución impecable. Trabajo realizado muy bien.",
+          name: "Tom Place",
+          time: "23 Oct",
+          back: "bg-[#0DA128]",
+          icon: "nextdoor",
         },
       ],
-      button: {
-        label: "VER TODAS LAS RESEÑAS EN GOOGLE",
-        href: "#",
-      },
+      button: [
+        {
+          label: "RESEÑAS EN GOOGLE",
+          href: "https://share.google/omZSIQdYfU5n9YwKD",
+          back: "bg-[#EB4335]",
+        },
+        {
+          label: "RESEÑAS EN NEXTDOOR",
+          href: "https://nextdoor.com/pages/steve-farah-orlando-fl-1/",
+          back: "bg-[#1B8751]",
+        },
+      ],
     },
   },
   about: {
     hero: {
-      title: "Acerca de Steve's <br/> Premium <br/> Lavado a Presión",
+      title:
+        "Acerca de Steve's <br class='hidden sm:block lg:hidden'/> Premium <br class='block sm:hidden lg:block'/> Lavado <br class='hidden sm:block lg:hidden'/> a Presión",
       stadistic: [
         {
           title: "100%",
@@ -775,7 +854,7 @@ export default {
       description:
         "Steve's Premium Pressure Washing es una empresa profesional de limpieza residencial y comercial que se especializa en servicios de lavado a presión. Nuestro equipo tiene años de experiencia y experiencia para limpiar efectivamente todo tipo de edificios, desde pequeños negocios hasta propiedades comerciales y residenciales grandes. <br/> <br/> Nos enorgullece proporcionar servicios de alta calidad y un servicio al cliente excepcional a nuestros clientes.",
       button: {
-        label: "OBTENER UN PRESUPUESTO GRATIS",
+        label: "OBTENER PRESUPUEST",
         href: "#",
         bgColor: "bg-accent",
         textColor: "text-primary",
@@ -841,18 +920,18 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a Presión <br/> & Sellado de <br class="hidden sm:block"/> Adoquines</span> Expertos',
-      description: "Un Servicio en el que Puedes Confiar",
+        'Expertos <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Lavado a <br class="hidden sm:block lg:hidden"/> Presión <br class="hidden lg:block"/> & Sellado de <br class="hidden sm:block lg:hidden"/> Adoquines</span> Premium',
+      description: "Servicio en que Puedes Confiar",
       buttons: [
         {
-          label: "Llamar Ahora",
+          label: "Llamar Ya",
           href: "tel:+14078448104",
           buttonColor: "bg-accent",
           textColor: "text-primary",
         },
         {
-          label: "Obtener Presupuesto Ahora",
-          href: "#",
+          label: "Obtener Presupuesto",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -886,9 +965,9 @@ export default {
   },
   footer: {
     description:
-      "En Steve's Premium Pressure Washing, nos especializamos en limpieza <br/> exterior residencial y comercial. Orgullosamente sirviendo a Orlando, Saint <br/> Cloud, Kissimmee, Winter Park y Lake Nona.",
+      "En Steve's Premium Pressure Washing, nos especializamos en limpieza <br class='hidden lg:block'/> exterior residencial y comercial. Orgullosamente sirviendo a Orlando, Saint <br class='hidden lg:block'/> Cloud, Kissimmee, Winter Park y Lake Nona.",
     service: {
-      title: "HORARIOS DE SERVICIO",
+      title: "HORARIOS",
       items: [
         {
           title: "Toda la semana <br/> 8:00am - 8:00pm",
@@ -907,7 +986,7 @@ export default {
       ],
     },
     nav: {
-      title: "ENLACES RÁPIDOS",
+      title: "ENLACES ",
       items: [
         {
           label: "Inicio",

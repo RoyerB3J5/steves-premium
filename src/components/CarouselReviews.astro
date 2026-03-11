@@ -1,0 +1,438 @@
+---
+type Translations = typeof import("../i18n/en").default;
+type ReviewsContent = Translations["main"]["review"];
+interface Props {
+  content: ReviewsContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<div
+  class="flex flex-col justify-center items-center gap-10 relative w-full animation-up"
+  id="carousel-container-1"
+>
+  {/* Carousel Track */}
+  <div class="w-full overflow-hidden">
+    <div
+      id="carousel-track-1"
+      class="flex transition-transform duration-500 ease-out items-stretch"
+    >
+      {/* Clones at start (last 4 items) */}
+      {
+        content.items.slice(-4).map((item) => (
+          <div
+            class="shrink-0 carousel-item-1 px-3 "
+            data-clone="true"
+          >
+            <div class='flex flex-col justify-start items-start gap-6 rounded-3xl bg-white p-8 h-full'>
+              <div class="w-full flex justify-between items-center">
+                <div class="flex justify-center items-center gap-1">
+                  {Array(5)
+                    .fill(0)
+                    .map((_) => (
+                      <img
+                        src="/images/star.svg"
+                        alt="star"
+                        width="20"
+                        height="20"
+                        class="w-4 h-auto"
+                      />
+                    ))}
+                </div>
+                <img
+                  src={`/images/${item.icon}.svg`}
+                  alt="Google logo"
+                  width="20"
+                  height="20"
+                  class="w-6 h-auto"
+                />
+              </div>
+              <p class="text-paragraph text-[14px] italic font-normal leading-[150%] flex-1">
+                {item.content}
+              </p>
+              <div class="flex justify-start items-center gap-2">
+                <div class={`${item.back} w-8 h-8 rounded-full flex justify-center items-center`}>
+                  <p class="text-[14px] font-bold uppercase leading-[150%] text-white">
+                    {item.name[0]}
+                  </p>
+                </div>
+                <div class="flex flex-col justify-center items-start">
+                  <p class="text-[14px] text-primary font-semibold leading-[150%]">{item.name}</p>
+                  <p class="text-paragraph text-[10px] font-normal leading-[150%]">{item.time}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+
+      {/* Original items */}
+      {
+        content.items.map((item) => (
+          <div class="shrink-0 carousel-item-1 px-3" data-item-index="true">
+            <div class="flex flex-col justify-start items-start gap-6 rounded-3xl bg-white p-8 h-full">
+              <div class="w-full flex justify-between items-center">
+                <div class="flex justify-center items-center gap-1">
+                  {Array(5)
+                    .fill(0)
+                    .map((_) => (
+                      <img
+                        src="/images/star.svg"
+                        alt="star"
+                        width="20"
+                        height="20"
+                        class="w-4 h-auto"
+                      />
+                    ))}
+                </div>
+                <img
+                  src={`/images/${item.icon}.svg`}
+                  alt="Google logo"
+                  width="20"
+                  height="20"
+                  class="w-6 h-auto"
+                />
+              </div>
+              <p class="text-paragraph text-[14px] italic font-normal leading-[150%] flex-1">
+                {item.content}
+              </p>
+              <div class="flex justify-start items-center gap-2">
+                <div class={`${item.back} w-8 h-8 rounded-full flex justify-center items-center`}>
+                  <p class="text-[14px] font-bold uppercase leading-[150%] text-white">
+                    {item.name[0]}
+                  </p>
+                </div>
+                <div class="flex flex-col justify-center items-start">
+                  <p class="text-[14px] text-primary font-semibold leading-[150%]">{item.name}</p>
+                  <p class="text-paragraph text-[10px] font-normal leading-[150%]">{item.time}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+
+      {/* Clones at end (first 4 items) */}
+      {
+        content.items.slice(0, 4).map((item) => (
+          <div class="shrink-0 carousel-item-1 px-3" data-clone="true">
+            <div class="flex flex-col justify-start items-start gap-6 rounded-3xl bg-white p-8 h-full">
+              <div class="w-full flex justify-between items-center">
+                <div class="flex justify-center items-center gap-1">
+                  {Array(5)
+                    .fill(0)
+                    .map((_) => (
+                      <img
+                        src="/images/star.svg"
+                        alt="star"
+                        width="20"
+                        height="20"
+                        class="w-4 h-auto"
+                      />
+                    ))}
+                </div>
+                <img
+                  src={`/images/${item.icon}.svg`}
+                  alt="Google logo"
+                  width="20"
+                  height="20"
+                  class="w-6 h-auto"
+                />
+              </div>
+              <p class="text-paragraph text-[14px] italic font-normal leading-[150%] flex-1">
+                {item.content}
+              </p>
+              <div class="flex justify-start items-center gap-2">
+                <div class={`${item.back} w-8 h-8 rounded-full flex justify-center items-center`}>
+                  <p class="text-[14px] font-bold uppercase leading-[150%] text-white">
+                    {item.name[0]}
+                  </p>
+                </div>
+                <div class="flex flex-col justify-center items-start">
+                  <p class="text-[14px] text-primary font-semibold leading-[150%]">{item.name}</p>
+                  <p class="text-paragraph text-[10px] font-normal leading-[150%]">{item.time}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  {/* Indicators */}
+  <div class="flex justify-center items-center gap-2" id="carousel-indicators-1">
+    {
+      Array.from({ length: content.items.length }).map((_, index) => (
+        <button
+          class={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${index === 0 ? "bg-secondary w-8" : "bg-secondary/10"}`}
+          data-index={index}
+        />
+      ))
+    }
+  </div>
+
+  {/* Navigation Buttons */}
+  <button
+    id="carousel-prev-1"
+    class="w-10 h-10 rounded-full bg-secondary/15 hover:bg-secondary/25 absolute top-[40%] -left-16 flex justify-center items-center transition-colors duration-300 z-10 cursor-pointer"
+    aria-label="Previous slide"
+  >
+    <img src="/images/arrow.svg" alt="Anterior" width="24" height="24" class="w-4 h-4 rotate-180" />
+  </button>
+  <button
+    id="carousel-next-1"
+    class="w-10 h-10 rounded-full bg-secondary/15 hover:bg-secondary/25 absolute top-[40%] -right-16 flex justify-center items-center transition-colors duration-300 z-10 cursor-pointer"
+    aria-label="Next slide"
+  >
+    <img src="/images/arrow.svg" alt="Siguiente" width="24" height="24" class="w-4 h-4" />
+  </button>
+</div>
+
+<script is:inline>
+  (function () {
+    const ITEM_COUNT = 8;
+    const AUTO_PLAY_INTERVAL = 8000;
+
+    let cloneCount = 4; // Se actualizará dinámicamente
+    let currentIndex = cloneCount;
+    let itemsPerView = getItemsPerView();
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartTranslate = 0;
+    let autoPlayInterval = null;
+    let isTransitioning = false;
+
+    const container = document.getElementById("carousel-container-1");
+    const track = document.getElementById("carousel-track-1");
+    const prevBtn = document.getElementById("carousel-prev-1");
+    const nextBtn = document.getElementById("carousel-next-1");
+    const indicators = document.querySelectorAll("#carousel-indicators-1 button");
+
+    function getItemsPerView() {
+      const width = window.innerWidth;
+      if (width >= 1200) return 4;
+      if (width >= 900) return 3;
+      if (width >= 640) return 2;
+      return 1;
+    }
+
+    function updateItemWidths() {
+      itemsPerView = getItemsPerView();
+      cloneCount = itemsPerView;
+      const items = document.querySelectorAll(".carousel-item-1");
+      const width = 100 / itemsPerView;
+      items.forEach((item) => {
+        item.style.width = width + "%";
+      });
+      currentIndex = cloneCount;
+      updatePosition();
+    }
+
+    function updatePosition() {
+      const offset = -(currentIndex * (100 / itemsPerView));
+      track.style.transform = `translateX(${offset}%)`;
+      updateIndicators();
+    }
+
+    function updateIndicators() {
+      const realIndex = (currentIndex - cloneCount) % ITEM_COUNT;
+      indicators.forEach((indicator, index) => {
+        const isActive = index === realIndex;
+        if (isActive) {
+          indicator.classList.add("bg-secondary", "w-8");
+          indicator.classList.remove("bg-secondary/10");
+        } else {
+          indicator.classList.add("bg-secondary/10");
+          indicator.classList.remove("bg-secondary", "w-8");
+        }
+      });
+    }
+
+    function nextSlide() {
+      if (isTransitioning) return;
+      track.style.transition = "transform 0.5s ease-out";
+      isTransitioning = true;
+      currentIndex++;
+      updatePosition();
+
+      if (currentIndex >= cloneCount + ITEM_COUNT) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          currentIndex = cloneCount;
+          updatePosition();
+          isTransitioning = false;
+        }, 500);
+      } else {
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 500);
+      }
+    }
+
+    function prevSlide() {
+      if (isTransitioning) return;
+      track.style.transition = "transform 0.5s ease-out";
+      isTransitioning = true;
+      currentIndex--;
+      updatePosition();
+
+      if (currentIndex < cloneCount) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          currentIndex = cloneCount + ITEM_COUNT - 1;
+          updatePosition();
+          isTransitioning = false;
+        }, 500);
+      } else {
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 500);
+      }
+    }
+
+    function goToSlide(index) {
+      if (isTransitioning) return;
+      track.style.transition = "transform 0.5s ease-out";
+      isTransitioning = true;
+      currentIndex = cloneCount + index;
+      updatePosition();
+
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
+    }
+
+    function startAutoPlay() {
+      if (autoPlayInterval) clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(nextSlide, AUTO_PLAY_INTERVAL);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = null;
+      }
+    }
+
+    // Event Listeners
+    prevBtn.addEventListener("click", () => {
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    });
+
+    indicators.forEach((indicator) => {
+      indicator.addEventListener("click", (e) => {
+        stopAutoPlay();
+        goToSlide(parseInt(e.target.dataset.index));
+        startAutoPlay();
+      });
+    });
+
+    // Drag & Swipe
+    track.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      dragStartX = e.clientX;
+      dragStartTranslate = getCurrentTranslate();
+      stopAutoPlay();
+      track.style.transition = "none";
+      e.preventDefault();
+    });
+
+    track.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      const diff = e.clientX - dragStartX;
+      const percent = (diff / track.offsetWidth) * 100;
+      track.style.transform = `translateX(${dragStartTranslate + percent}%)`;
+    });
+
+    track.addEventListener("mouseup", () => {
+      if (!isDragging) return;
+      endDragSequence();
+    });
+
+    track.addEventListener("mouseleave", () => {
+      if (!isDragging) return;
+      endDragSequence();
+    });
+
+    track.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      dragStartX = e.touches[0].clientX;
+      dragStartTranslate = getCurrentTranslate();
+      stopAutoPlay();
+      track.style.transition = "none";
+    });
+
+    track.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      const diff = e.touches[0].clientX - dragStartX;
+      const percent = (diff / track.offsetWidth) * 100;
+      track.style.transform = `translateX(${dragStartTranslate + percent}%)`;
+    });
+
+    track.addEventListener("touchend", () => {
+      if (!isDragging) return;
+      endDragSequence();
+    });
+
+    function endDragSequence() {
+      isDragging = false;
+      const current = getCurrentTranslate();
+      const threshold = 100 / itemsPerView / 4;
+
+      track.style.transition = "transform 0.5s ease-out";
+
+      const diff = dragStartTranslate - current;
+      if (diff > threshold) {
+        currentIndex++;
+      } else if (diff < -threshold) {
+        currentIndex--;
+      }
+
+      updatePosition();
+
+      // Handle infinite loop
+      if (currentIndex >= cloneCount + ITEM_COUNT) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          currentIndex = cloneCount;
+          updatePosition();
+        }, 500);
+      } else if (currentIndex < cloneCount) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          currentIndex = cloneCount + ITEM_COUNT - 1;
+          updatePosition();
+        }, 500);
+      }
+
+      startAutoPlay();
+    }
+
+    function getCurrentTranslate() {
+      const transform = track.style.transform;
+      if (!transform) return 0;
+      const match = transform.match(/translateX\((-?\d+(?:\.\d+)?)%\)/);
+      return match ? parseFloat(match[1]) : 0;
+    }
+
+    // Initialize
+    window.addEventListener("resize", updateItemWidths);
+    updateItemWidths();
+    startAutoPlay();
+  })();
+</script>
+
+<style>
+  #carousel-track {
+    will-change: transform;
+  }
+</style>

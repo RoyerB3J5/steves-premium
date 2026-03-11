@@ -38,12 +38,12 @@ const lang = match ? match[1] : 'en';
           alt="Logo de Steve's Premium Pressure Wash"
           width="355"
           height="64"
-          class="cursor-pointer w-52 sm:w-88.75 h-auto block"
+          class="cursor-pointer w-52 sm:w-54 lg:w-88.75 h-auto block"
         />
     </a>
     <!-- Menú desktop (lg y arriba) -->
     <div
-      class="relative bg-transparent flex flex-row justify-center items-center h-auto w-auto z-10 py-0 transform translate-x-0 transition-transform duration-300 ease-out gap-8"
+      class="relative bg-transparent flex flex-row justify-center items-center h-auto w-auto z-10 py-0 transform translate-x-0 transition-transform duration-300 ease-out gap-6 3xl:gap-8"
     >
       
       <nav>
@@ -99,7 +99,7 @@ const lang = match ? match[1] : 'en';
           target="_blank"
           extraBtnClass={`bg-accent hover:bg-accent/90 hidden lg:flex`}
       />
-      <div class="sm:flex justify-center items-center gap-1 hidden ">
+      <div class="hidden lg:flex justify-center items-center gap-1  ">
         <img src="/images/phone.svg" alt="Telefono de contacto" width="24" height="24" class="w-6 h-6" />
         <a href="tel:4078448104" class="text-[14px] font-semibold leading-[150%] text-white hover:text-secondary transition-all duration-300 ease-in-out">407 - 844 -8104</a>
       </div>
@@ -123,7 +123,7 @@ const lang = match ? match[1] : 'en';
 
 <!-- Menú móvil independiente (lg para abajo) -->
 <div
-  class="fixed top-0 right-0 bottom-0 lg:hidden flex items-center bg-secondary text-white flex-col justify-center h-[85%] w-full z-60 py-6 gap-12 transform -translate-y-full transition-transform duration-300 ease-out"
+  class="fixed top-0 right-0 bottom-0 lg:hidden flex items-center bg-primary text-white flex-col justify-center h-[85%] w-full z-60 py-6 gap-12 transform -translate-y-full transition-transform duration-300 ease-out"
   id="mobile-menu"
 >
   <img
@@ -162,7 +162,7 @@ const lang = match ? match[1] : 'en';
           const isLocations = index === 0;
           return (
             <li
-              class={` flex flex-col items-center justify-center group gap-3.5 px-0 w-full py-5 text-center text-white  ${isLocations ? 'relative' : ''} ${isActive ? 'bg-primary text-white uppercase' : ''}`}
+              class={` flex flex-col items-center justify-center group gap-3.5 px-0 w-full py-5 text-center text-white  ${isLocations ? 'relative' : ''} ${isActive ? 'bg-secondary text-white uppercase' : ''}`}
               id={`mobile-items-${index}`}
             >
               <a

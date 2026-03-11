@@ -31,7 +31,7 @@ export default {
     buttons: [
       {
         label: "Get Estimate",
-        href: "#",
+        href: "#contact",
       },
     ],
   },
@@ -39,7 +39,7 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br class="hidden sm:block lg:hidden"/> Washing <br class="hidden lg:block"/> & Paver <br class="hidden sm:block lg:hidden"/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
@@ -50,7 +50,7 @@ export default {
         },
         {
           label: "Get An Estimate Now",
-          href: "#",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -147,13 +147,13 @@ export default {
         {
           label: "Call Now",
           href: "tel:+14078448104",
-          buttonColor: "bg-primary w-[35%] md:w-auto",
+          buttonColor: "bg-primary w-[36%] md:w-auto",
           textColor: "text-white",
         },
         {
           label: "Get An Estimate Now",
-          href: "#",
-          buttonColor: "bg-accent w-[75%] md:w-auto",
+          href: "#contact",
+          buttonColor: "bg-accent w-[64%] md:w-auto",
           textColor: "text-primary",
         },
       ],
@@ -214,6 +214,15 @@ export default {
           name: "Britt",
           time: "A month ago",
           back: "bg-[#E33E7A]",
+          icon: "google",
+        },
+        {
+          content:
+            "I hired Steve’s Premium Pressure Washing to pressure wash, sand, and seal my driveway pavers and I was beyond impressed. Steve took extra time and attention to detail, and the finished result was absolutely beautiful. I was very satisfied with the quality of work and professionalism. I highly recommend them!",
+          name: "Roma Khan",
+          time: "9 Dec",
+          back: "bg-[#FBBC05]",
+          icon: "nextdoor",
         },
         {
           content:
@@ -221,6 +230,15 @@ export default {
           name: "Chris Rosado",
           time: "4 months ago",
           back: "bg-[#2F89D4]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve takes great care in his work.  Goes above and beyond without being asked.  Wendy fielded a ton of questions without any hesitation.   Both of them walk you through a job as if you were family.  Will definitely call them back when we need them.   Thanks to both for taking care of our pressuring washing on short notice!!",
+          name: "Britt K.",
+          time: "25 Jan",
+          back: "bg-[#435260]",
+          icon: "nextdoor",
         },
         {
           content:
@@ -228,6 +246,15 @@ export default {
           name: "Victoria Perlaza",
           time: "5 months ago",
           back: "bg-[#7B909D]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve Pressure washing did a great job. Hired them to Seal my driveway and entrance. I was impressed with the result due to them having to take off old seal from a prior job not done right. The pavers look like new. The attention to detail was amazing and super punctual. Availability to answer questions was also a plus. Highly recommend them.",
+          name: "Maria Valle",
+          time: "17 Dec",
+          back: "bg-[#EC27F6]",
+          icon: "nextdoor",
         },
         {
           content:
@@ -235,12 +262,29 @@ export default {
           name: "Fabiana Diaz",
           time: "5 months ago",
           back: "bg-[#7720A4]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve, Wendy and their team earned a full five-star rating for successfully completing the pressure washing and sealing of our driveway and lanai pavers; and the pressure wash cleaning of our house exterior.  They excelled at customer service, attention to detail, use of high quality products, and flawless execution.  Job very well done.",
+          name: "Tom Place",
+          time: "23 Oct",
+          back: "bg-[#0DA128]",
+          icon: "nextdoor",
         },
       ],
-      button: {
-        label: "VIEW ALL REVIEWS ON GOOGLE",
-        href: "#",
-      },
+      button: [
+        {
+          label: "VIEW ALL REVIEWS ON GOOGLE",
+          href: "#",
+          back: "bg-[#EB4335]",
+        },
+        {
+          label: "VIEW ALL REVIEWS ON NEXTDOOR",
+          href: "#",
+          back: "bg-[#1B8751]",
+        },
+      ],
     },
     share: {
       title:
@@ -293,7 +337,7 @@ export default {
           "We don't believe in cookie cutter pricing. Every home and business is different. That’s why we provide personalized service; just provide us with basic information, and our team will tailor our services to meet your exact requirements. <br/> <br/> Get a transparent estimate so you know exactly what to expect with zero hidden costs.",
         button: {
           label: "GET YOUR FREE ESTIMATE",
-          href: "#",
+          href: "#contact",
           bgColor: "bg-accent",
           textColor: "text-primary",
           icon: "arrow",
@@ -314,7 +358,7 @@ export default {
         "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
       button: {
         label: "GET A FREE ESTIMATE",
-        href: "#",
+        href: "#contact",
         bgColor: "bg-accent",
         textColor: "text-primary",
         icon: "arrow",
@@ -348,34 +392,24 @@ export default {
       },
       items: [
         {
-          title: "Paver Station",
-          place: "Winter Park, FL",
+          title: "Sealing driveway ",
+          place: "Laureate Park, Lake Nona",
           image: "project1",
         },
         {
-          title: "Full Exterior Soft Wash",
-          place: "Lake Nola, FL",
+          title: "Sealing and tinting",
+          place: "Conway",
           image: "project2",
         },
         {
-          title: "Premium Driveway Cleaning",
-          place: "Windermere, FL",
+          title: "Stripping and sealing a pool area",
+          place: "East Lake Park, St Cloud",
           image: "project3",
         },
         {
-          title: "Paver Station",
-          place: "Winter Park, FL",
-          image: "project1",
-        },
-        {
-          title: "Full Exterior Soft Wash",
-          place: "Lake Nola, FL",
-          image: "project2",
-        },
-        {
-          title: "Premium Driveway Cleaning",
-          place: "Windermere, FL",
-          image: "project3",
+          title: "Pool stripping and sealing",
+          place: "Eagle Creek, Lake Nona",
+          image: "project4",
         },
       ],
       mediaDescription: "Follow Us For Spotless transformations",
@@ -411,7 +445,7 @@ export default {
       img: "services-hero",
       imagePhone: "services-hero-sm",
       title:
-        "Our Professional <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning <br class='hidden sm:block'/> Services </span>",
+        "Our Professional <br /> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[64px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Cleaning Services </span>",
       description:
         "From cozy homes to large commercial complexes, Steve’s <br class='hidden sm:block'/> Premium Pressure Washing delivers spotless results across <br class='hidden sm:block'/> Orlando.",
       buttons: [
@@ -423,7 +457,7 @@ export default {
         },
         {
           label: "Get An Estimate Now",
-          href: "#",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -507,7 +541,7 @@ export default {
         img: "residential-hero",
         imagePhone: "residential-hero-sm",
         title:
-          "Professional <br class='hidden sm:block'/> <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Home <br/> Restoration </span> In <br class='hidden sm:bloxk'/> Orlando",
+          "Professional <span class='text-secondary text-[32px] sm:text-[54px] lg:text-[64px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Home <br/> Restoration </span> In Orlando",
         description:
           "Pressure washing keeps your home clean and protected, <br class='hidden sm:block'/> removing grime from roofs, siding, and outdoor surfaces.",
         buttons: [
@@ -519,7 +553,7 @@ export default {
           },
           {
             label: "Get An Estimate Now",
-            href: "#",
+            href: "#contact",
             buttonColor: "border-[1.5px] border-white",
             textColor: "text-white",
           },
@@ -588,7 +622,7 @@ export default {
           "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
         button: {
           label: "GET A FREE ESTIMATE",
-          href: "#",
+          href: "#contact",
           bgColor: "bg-accent",
           textColor: "text-primary",
           icon: "arrow",
@@ -600,7 +634,7 @@ export default {
         img: "commercial-hero",
         imagePhone: "commercial-hero-sm",
         title:
-          "<span class='text-secondary text-[32px] sm:text-[54px] lg:text-[60px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Commercial <br class='hidden sm:block'/> Commercial </span> For <br class='hidden sm:block'/> Business <br class='hidden sm:block'/> Excellence",
+          "<span class='text-secondary text-[32px] sm:text-[54px] lg:text-[64px] 3xl:text-[80px] leading-[110%] font-medium capitalize font-title'> Commercial Commercial <br class='hidden sm:block'/> </span> For Business Excellence",
         description:
           "A clean exterior makes a strong first impression. Our <br class='hidden sm:block'/> commercial washing enhances your business’s safety and <br class='hidden sm:block'/> appearance.",
         buttons: [
@@ -612,7 +646,7 @@ export default {
           },
           {
             label: "Get An Estimate Now",
-            href: "#",
+            href: "#contact",
             buttonColor: "border-[1.5px] border-white",
             textColor: "text-white",
           },
@@ -659,7 +693,7 @@ export default {
           "At Steve's Premium Pressure Washing, we turn dirty and weathered surfaces into clean, welcoming spaces. Let us bring top quality service, professional equipment, and a spotless experience to your home or business.",
         button: {
           label: "GET A FREE ESTIMATE",
-          href: "#",
+          href: "#contact",
           bgColor: "bg-accent",
           textColor: "text-primary",
           icon: "arrow",
@@ -671,7 +705,7 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br class="hidden sm:block lg:hidden"/>  Washing <br class="block sm:hidden lg:block"/> & Paver <br class="hidden sm:block lg:hidden"/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
@@ -682,7 +716,7 @@ export default {
         },
         {
           label: "Get An Estimate Now",
-          href: "#",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },
@@ -720,6 +754,15 @@ export default {
           name: "Britt",
           time: "A month ago",
           back: "bg-[#E33E7A]",
+          icon: "google",
+        },
+        {
+          content:
+            "I hired Steve’s Premium Pressure Washing to pressure wash, sand, and seal my driveway pavers and I was beyond impressed. Steve took extra time and attention to detail, and the finished result was absolutely beautiful. I was very satisfied with the quality of work and professionalism. I highly recommend them!",
+          name: "Roma Khan",
+          time: "9 Dec",
+          back: "bg-[#FBBC05]",
+          icon: "nextdoor",
         },
         {
           content:
@@ -727,6 +770,15 @@ export default {
           name: "Chris Rosado",
           time: "4 months ago",
           back: "bg-[#2F89D4]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve takes great care in his work.  Goes above and beyond without being asked.  Wendy fielded a ton of questions without any hesitation.   Both of them walk you through a job as if you were family.  Will definitely call them back when we need them.   Thanks to both for taking care of our pressuring washing on short notice!!",
+          name: "Britt K.",
+          time: "25 Jan",
+          back: "bg-[#435260]",
+          icon: "nextdoor",
         },
         {
           content:
@@ -734,6 +786,15 @@ export default {
           name: "Victoria Perlaza",
           time: "5 months ago",
           back: "bg-[#7B909D]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve Pressure washing did a great job. Hired them to Seal my driveway and entrance. I was impressed with the result due to them having to take off old seal from a prior job not done right. The pavers look like new. The attention to detail was amazing and super punctual. Availability to answer questions was also a plus. Highly recommend them.",
+          name: "Maria Valle",
+          time: "17 Dec",
+          back: "bg-[#EC27F6]",
+          icon: "nextdoor",
         },
         {
           content:
@@ -741,18 +802,34 @@ export default {
           name: "Fabiana Diaz",
           time: "5 months ago",
           back: "bg-[#7720A4]",
+          icon: "google",
+        },
+        {
+          content:
+            "Steve, Wendy and their team earned a full five-star rating for successfully completing the pressure washing and sealing of our driveway and lanai pavers; and the pressure wash cleaning of our house exterior.  They excelled at customer service, attention to detail, use of high quality products, and flawless execution.  Job very well done.",
+          name: "Tom Place",
+          time: "23 Oct",
+          back: "bg-[#0DA128]",
+          icon: "nextdoor",
         },
       ],
-      button: {
-        label: "VIEW ALL REVIEWS ON GOOGLE",
-        href: "#",
-      },
+      button: [
+        {
+          label: "VIEW ALL REVIEWS ON GOOGLE",
+          href: "#",
+          back: "bg-[#EB4335]",
+        },
+        {
+          label: "VIEW ALL REVIEWS ON NEXTDOOR",
+          href: "#",
+          back: "bg-[#1B8751]",
+        },
+      ],
     },
   },
   about: {
     hero: {
-      title:
-        "About Steve’s <br class='hidden sm:block'/> Premium <br class='hidden sm:block'/> Pressure washing",
+      title: "About Steve’s Premium <br class='hidden sm:block'/> Pressure washing",
       stadistic: [
         {
           title: "100%",
@@ -774,7 +851,7 @@ export default {
         "Steve's Premium Pressure Washing is a professional residential and commercial cleaning company that specializes in pressure washing services. Our team has years of experience and expertise to effectively clean all types of buildings, from small businesses to large commercial and residential properties. <br/> <br/> We pride ourselves on providing high-quality services and exceptional customer service to our clients.",
       button: {
         label: "GET A FREE ESTIMATE",
-        href: "#",
+        href: "#contact",
         bgColor: "bg-accent",
         textColor: "text-primary",
         icon: "arrow",
@@ -839,7 +916,7 @@ export default {
     hero: {
       video: "",
       title:
-        'Premium <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br/> Washing & Paver <br class="hidden sm:block"/> Sealing</span> Experts',
+        'Premium <span class="text-secondary text-[32px] sm:text-[56px] 3xl:text-[64px] leading-[110%] font-medium capitalize font-title">Pressure <br class="hidden sm:block lg:hidden"/> Washing <br class="hidden lg:block"/> & Paver <br class="hidden sm:block lg:hidden"/> Sealing</span> Experts',
       description: "A Service You Can Trust",
       buttons: [
         {
@@ -850,7 +927,7 @@ export default {
         },
         {
           label: "Get An Estimate Now",
-          href: "#",
+          href: "#contact",
           buttonColor: "border-[1.5px] border-white",
           textColor: "text-white",
         },

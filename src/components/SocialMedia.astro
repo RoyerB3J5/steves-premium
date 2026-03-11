@@ -1,0 +1,26 @@
+---
+const icons = [
+  {
+    name: "instagram-2",
+    href: "https://www.instagram.com/p/C7Vz_e1Mqwl/?hl=en",
+  },
+  {
+    name: "facebook-2",
+    href: "https://www.facebook.com/p/Steves-Premium-Pressure-Washing-100083189356054/",
+  },
+  {
+    name: "youtube",
+    href: "https://www.youtube.com/channel/UCglQf9u-1WeDqjLmDKOVg6A",
+  },
+];
+---
+
+<div class="flex justify-center items-center gap-3.5 w-full">
+  {
+    icons.map((i) => (
+      <a href={i.href} class="p-2 rounded-full flex items-center justify-center bg-accent shrink-0">
+        <img src={`/image/${i.name}.svg`} alt={i.name} class="w-5 h-5" />
+      </a>
+    ))
+  }
+</div>
