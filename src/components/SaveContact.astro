@@ -1,19 +1,19 @@
 ---
 // SaveContact.astro (Astro component)
 const contact = {
-  firstName: 'Eliu',
-  lastName: '',
-  org: 'Quality Portable Services',
-  title: 'Quality Portable Services',
-  phone: '+13212179445',
-  email: 'info@qualityportablerentalservice.com',
-  url: 'https://qualityportableservices.com',
-  street: '',
-  city: 'Tampa',
-  region: 'Florida',
-  postal: '',
-  country: 'United States',
-  note: '',
+  firstName: "Steve",
+  lastName: "",
+  org: "Steve's Premium Pressure Washing",
+  title: "Steve's Premium Pressure Washing",
+  phone: "+14078448104",
+  email: "stevepressurewashing@yahoo.com",
+  url: "https://stevespremiumpressurewashing.com/en/",
+  street: "",
+  city: "Orlando",
+  region: "Florida",
+  postal: "",
+  country: "United States",
+  note: "",
 };
 ---
 
@@ -29,22 +29,22 @@ const contact = {
   // contact JSON is embedded on the button's data-contact attribute
   function buildVCard(c) {
     const lines = [
-      'BEGIN:VCARD',
-      'VERSION:3.0',
+      "BEGIN:VCARD",
+      "VERSION:3.0",
       `FN:${c.firstName} ${c.lastName}`,
       `N:${c.lastName};${c.firstName};;;`,
-      c.org ? `ORG:${c.org}` : '',
-      c.title ? `TITLE:${c.title}` : '',
-      c.phone ? `TEL;TYPE=CELL,VOICE:${c.phone}` : '',
-      c.email ? `EMAIL;TYPE=INTERNET:${c.email}` : '',
-      c.url ? `URL:${c.url}` : '',
+      c.org ? `ORG:${c.org}` : "",
+      c.title ? `TITLE:${c.title}` : "",
+      c.phone ? `TEL;TYPE=CELL,VOICE:${c.phone}` : "",
+      c.email ? `EMAIL;TYPE=INTERNET:${c.email}` : "",
+      c.url ? `URL:${c.url}` : "",
       c.street || c.city
-        ? `ADR;TYPE=WORK:;;${c.street || ''};${c.city || ''};${c.region || ''};${c.postal || ''};${c.country || ''}`
-        : '',
-      c.note ? `NOTE:${c.note}` : '',
-      'END:VCARD',
+        ? `ADR;TYPE=WORK:;;${c.street || ""};${c.city || ""};${c.region || ""};${c.postal || ""};${c.country || ""}`
+        : "",
+      c.note ? `NOTE:${c.note}` : "",
+      "END:VCARD",
     ];
-    return lines.filter(Boolean).join('\r\n'); // usar CRLF para compatibilidad
+    return lines.filter(Boolean).join("\r\n"); // usar CRLF para compatibilidad
   }
 
   function isIOS() {
@@ -58,28 +58,27 @@ const contact = {
   // Simplified save flow: open a data: URL in the same tab (DataURL) to show vCard preview / Contacts UI
   function openDataUrlForContact(c) {
     const vcard = buildVCard(c || {});
-    const dataUrl =
-      'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+    const dataUrl = "data:text/vcard;charset=utf-8," + encodeURIComponent(vcard);
     // Navigate in the same tab to open preview
     window.location.href = dataUrl;
   }
 
   // Install click handler for the single button
   try {
-    const btn = document.getElementById('test-dataurl');
+    const btn = document.getElementById("test-dataurl");
     if (btn) {
-      btn.addEventListener('click', () => {
+      btn.addEventListener("click", () => {
         let c = null;
         try {
           c = btn.dataset.contact ? JSON.parse(btn.dataset.contact) : null;
         } catch (err) {
-          console.error('Failed to parse contact dataset', err);
+          console.error("Failed to parse contact dataset", err);
         }
-        if (!c) return alert('No contact data');
+        if (!c) return alert("No contact data");
         openDataUrlForContact(c);
       });
     }
   } catch (err) {
-    console.error('Failed to install dataurl click handler:', err);
+    console.error("Failed to install dataurl click handler:", err);
   }
 </script>

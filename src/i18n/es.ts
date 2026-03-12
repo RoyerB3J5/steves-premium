@@ -981,8 +981,8 @@ export default {
         },
         {
           icon: "mail-2",
-          label: "@",
-          href: "#",
+          label: "stevepressurewashing@yahoo.com",
+          href: "https://mail.google.com/mail/?view=cm&fs=1&to=stevepressurewashing@yahoo.com",
         },
         {
           icon: "clock",
