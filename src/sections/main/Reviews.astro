@@ -21,17 +21,27 @@ const { content } = Astro.props as Props;
       <div class="w-21.5 h-1.5 rounded-sm animation-color-shift"></div>
     </div>
     <CarouselReviews content={content} />
-    <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 w-full animation-zoom">
+    <div
+      class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 w-full animation-zoom"
+    >
       {
         content.button.map((item) => (
           <a href={item.href} class="w-full md:w-auto">
             <button
-              class={`w-full md:w-auto flex justify-center items-center gap-3.5 box-border   py-4 px-6 rounded-lg cursor-pointer hover:-translate-y-1.25 transition-all duration-300 ease-in-out group ${item.back}`}
+              class={`w-full md:w-auto flex justify-center items-center gap-3.5 box-border py-2.5 px-8 rounded-lg cursor-pointer hover:-translate-y-1.25 transition-all duration-300 ease-in-out group ${item.back}`}
             >
-              <p class="text-white text-[14px] font-semibold leading-[150%] uppercase transition-all duration-300 ease-in-out">
+              <img
+                src={`/images/${item.image}.svg`}
+                alt={item.label}
+                width="120"
+                height="17"
+                class={`${item.image == "google-1" ? "w-18.5 h-[25px]" : "w-30 h-[17px]"}`}
+              />
+              <p
+                class={`${item.image == "google-1" ? "text-[#6C6D70]" : "text-white"} text-[20px] font-medium leading-[150%] transition-all duration-300 ease-in-out`}
+              >
                 {item.label}
               </p>
-              <img src="/images/arrow-b.svg" alt="Flecha" width="16" height="16" class="w-4 h-auto" />
             </button>
           </a>
         ))

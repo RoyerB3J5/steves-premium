@@ -276,12 +276,14 @@ export default {
       ],
       button: [
         {
-          label: "RESEÑAS EN GOOGLE",
+          image: "google-1",
+          label: "RESEÑAS",
           href: "https://share.google/omZSIQdYfU5n9YwKD",
-          back: "bg-[#EB4335]",
+          back: "bg-white border-2 border-[#CFCFCF] box-container",
         },
         {
-          label: "RESEÑAS EN NEXTDOOR",
+          image: "nextdoor-1",
+          label: "RESEÑAS",
           href: "https://nextdoor.com/pages/steve-farah-orlando-fl-1/",
           back: "bg-[#1B8751]",
         },
@@ -847,12 +849,14 @@ export default {
       ],
       button: [
         {
-          label: "RESEÑAS EN GOOGLE",
+          image: "google-1",
+          label: "RESEÑAS",
           href: "https://share.google/omZSIQdYfU5n9YwKD",
-          back: "bg-[#EB4335]",
+          back: "bg-white border-2 border-[#CFCFCF] box-container",
         },
         {
-          label: "RESEÑAS EN NEXTDOOR",
+          image: "nextdoor-1",
+          label: "RESEÑAS",
           href: "https://nextdoor.com/pages/steve-farah-orlando-fl-1/",
           back: "bg-[#1B8751]",
         },
@@ -871,6 +875,20 @@ export default {
         {
           title: "Orlando",
           description: "Expertos Locales",
+        },
+      ],
+      buttons: [
+        {
+          label: "Llamar",
+          href: "tel:+14078448104",
+          buttonColor: "bg-accent",
+          textColor: "text-primary",
+        },
+        {
+          label: "Obtener Presupuesto",
+          href: "#contact",
+          buttonColor: "border-[1.5px] border-white",
+          textColor: "text-white",
         },
       ],
       image: "about-hero",

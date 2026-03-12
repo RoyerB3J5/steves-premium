@@ -275,13 +275,15 @@ export default {
       ],
       button: [
         {
-          label: "VIEW ALL REVIEWS ON GOOGLE",
-          href: "#",
-          back: "bg-[#EB4335]",
+          image: "google-1",
+          label: "Reviews",
+          href: "https://share.google/omZSIQdYfU5n9YwKD",
+          back: "bg-white border-2 border-[#CFCFCF] box-container",
         },
         {
-          label: "VIEW ALL REVIEWS ON NEXTDOOR",
-          href: "#",
+          image: "nextdoor-1",
+          label: "Reviews",
+          href: "https://nextdoor.com/pages/steve-farah-orlando-fl-1/",
           back: "bg-[#1B8751]",
         },
       ],
@@ -844,13 +846,15 @@ export default {
       ],
       button: [
         {
-          label: "VIEW ALL REVIEWS ON GOOGLE",
-          href: "#",
-          back: "bg-[#EB4335]",
+          image: "google-1",
+          label: "Reviews",
+          href: "https://share.google/omZSIQdYfU5n9YwKD",
+          back: "bg-white border-2 border-[#CFCFCF] box-container",
         },
         {
-          label: "VIEW ALL REVIEWS ON NEXTDOOR",
-          href: "#",
+          image: "nextdoor-1",
+          label: "Reviews",
+          href: "https://nextdoor.com/pages/steve-farah-orlando-fl-1/",
           back: "bg-[#1B8751]",
         },
       ],
@@ -867,6 +871,20 @@ export default {
         {
           title: "Orlando",
           description: "Local Experts",
+        },
+      ],
+      buttons: [
+        {
+          label: "Call Now",
+          href: "tel:+14078448104",
+          buttonColor: "bg-accent",
+          textColor: "text-primary",
+        },
+        {
+          label: "Get An Estimate Now",
+          href: "#contact",
+          buttonColor: "border-[1.5px] border-white",
+          textColor: "text-white",
         },
       ],
       image: "about-hero",
@@ -976,7 +994,7 @@ export default {
           href: "tel:+14078448104",
         },
         {
-          icon: "mail-2",
+          icon: "mail-55555555555552",
           label: "stevepressurewashing@yahoo.com",
           href: "https://mail.google.com/mail/?view=cm&fs=1&to=stevepressurewashing@yahoo.com",
         },
